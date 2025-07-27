@@ -1,0 +1,9 @@
+<template>
+    <v-container>
+        <h1>steadfs</h1>
+        <v-card>
+            <v-card-title>sadjflkasj</v-card-title>
+            <v-card-subtitle>dsfjdsakldf</v-card-subtitle>
+        </v-card>
+    </v-container>
+</template>

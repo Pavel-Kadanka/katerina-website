@@ -18,6 +18,4 @@ export default defineNuxtConfig({
       vuetify(),
     ],
   },
-
-  modules: ['@nuxtjs/tailwindcss'],
 })
