@@ -1,0 +1,121 @@
+/* assets/styles/gradients.css */
+
+/* ========== Gradient Animations ========== */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes radialShift {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* ========== Website Background Gradient ========== */
+.animated-gradient-bg {
+    position: relative;
+    background: linear-gradient(135deg, #FDF2F8, #F8F0F5, #F9EBF3, #F5F0F8);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    overflow: hidden;
+}
+
+.animated-gradient-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 20%, rgba(215, 139, 191, 0.1), rgba(178, 157, 217, 0.1), rgba(255, 153, 200, 0.1), rgba(233, 168, 214, 0.1));
+    background-size: 200% 200%;
+    animation: radialShift 20s ease infinite;
+    opacity: 0.6;
+    z-index: 0;
+}
+
+/* ========== Gradient Button ========== */
+.animated-gradient-btn {
+    position: relative;
+    z-index: 1;
+    color: white !important;
+    border: none;
+    overflow: hidden;
+    background: linear-gradient(135deg, #D78BBF, #FF99C8, #B29DD9);
+    background-size: 200% 200%;
+    animation: gradientShift 3s ease infinite;
+    transition: all 0.3s ease;
+}
+
+.animated-gradient-btn:hover {
+    background: linear-gradient(135deg, #B29DD9, #FF99C8, #E9A8D6);
+    background-size: 200% 200%;
+    animation: gradientShift 2s ease infinite;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ========== Gradient Text ========== */
+.gradient-text {
+    background: linear-gradient(135deg, #2E2E2E, #666666);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 5s ease infinite;
+}
+
+/* ========== Floating Icons ========== */
+.floating-icon {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* ========== Utility Classes ========== */
+.max-width-600 {
+    max-width: 600px;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+/* ========== Enhanced Animations ========== */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+.pulse-animation {
+    animation: pulse 2s ease-in-out infinite;
+}

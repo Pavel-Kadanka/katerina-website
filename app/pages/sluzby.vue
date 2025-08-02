@@ -1,15 +1,15 @@
 <template>
   <div>
     <!-- Hero Section -->
-    <v-container fluid class="hero-section pa-0">
+    <v-container fluid class="hero-section pa-0 hero-gradient-bg">
       <v-row no-gutters class="align-center" style="min-height: 60vh;">
         <v-col cols="12" class="text-center">
           <div class="hero-content">
-            <v-icon size="64" color="primary" class="mb-4">mdi-heart-pulse</v-icon>
-            <h1 class="text-h2 text-md-h1 font-weight-bold text-primary mb-4">
+            <v-icon size="64" color="white" class="mb-4 floating-icon">mdi-heart-pulse</v-icon>
+            <h1 class="text-h2 text-md-h1 font-weight-bold text-white mb-4">
               Služby
             </h1>
-            <p class="text-h5 text-secondary max-width-600 mx-auto">
+            <p class="text-h5 text-white max-width-600 mx-auto">
               Reiki & Šamanské léčení pro vaši vnitřní rovnováhu
             </p>
           </div>
@@ -63,14 +63,13 @@
             </v-col>
             <v-col cols="12" md="6" class="d-flex justify-center">
               <v-card
-                class="service-image-card pa-8"
-                :color="$vuetify.theme.current.dark ? 'surface' : 'accent'"
+                class="service-image-card pa-8 animated-gradient-card"
                 elevation="2"
                 rounded="xl"
                 max-width="400"
               >
                 <div class="text-center">
-                  <v-icon size="80" color="primary" class="mb-4">mdi-heart-pulse</v-icon>
+                  <v-icon size="80" color="primary" class="mb-4 floating-icon">mdi-heart-pulse</v-icon>
                   <h3 class="text-h5 font-weight-bold text-primary mb-3">Co Reiki léčí?</h3>
                   <ul class="text-body-2 text-secondary text-left">
                     <li class="mb-2">• Stres a úzkost</li>
@@ -89,19 +88,18 @@
           <v-row class="mb-16">
             <v-col cols="12" md="6" class="d-flex justify-center order-md-2">
               <v-card
-                class="service-image-card pa-8"
-                :color="$vuetify.theme.current.dark ? 'surface' : 'accent'"
+                class="service-image-card pa-8 animated-gradient-card"
                 elevation="2"
                 rounded="xl"
                 max-width="400"
               >
                 <div class="text-center">
-                  <v-icon size="80" color="secondary" class="mb-4">mdi-star</v-icon>
+                  <v-icon size="80" color="secondary" class="mb-4 floating-icon">mdi-star</v-icon>
                   <h3 class="text-h5 font-weight-bold text-primary mb-3">Co šamanské léčení řeší?</h3>
                   <ul class="text-body-2 text-secondary text-left">
                     <li class="mb-2">• Hluboká traumata</li>
-                    <li class="mb-2">• Duchovní krize</li>
                     <li class="mb-2">• Emoční bloky</li>
+                    <li class="mb-2">• Duchovní krize</li>
                     <li class="mb-2">• Ztrátu smyslu života</li>
                     <li class="mb-2">• Vztahové problémy</li>
                     <li class="mb-2">• Spojení s duší</li>
