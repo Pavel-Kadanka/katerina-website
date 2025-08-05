@@ -20,7 +20,7 @@
                 size="x-large"
                 color="accent"
                 variant="elevated"
-                class="text-body-1 font-weight-medium animated-gradient-btn mr-4"
+                class="text-body-1 font-weight-medium animated-gradient-btn ma-2"
                 rounded="xl"
               >
                 <v-icon start>mdi-heart-pulse</v-icon>
@@ -31,7 +31,7 @@
                 size="x-large"
                 color="primary"
                 variant="outlined"
-                class="text-body-1 font-weight-medium"
+                class="text-body-1 font-weight-medium ma-2"
                 rounded="xl"
               >
                 <v-icon start>mdi-calendar-check</v-icon>
