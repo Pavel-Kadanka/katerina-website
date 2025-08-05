@@ -71,6 +71,18 @@
           {{ item.title }}
         </v-list-item-title>
       </v-list-item>
+      <v-list-item class="d-flex justify-center">
+        <v-btn
+          to="/objednani"
+          variant="elevated"
+          class="animated-gradient-btn ma-2"
+          color="accent"
+          size="large"
+          rounded="xl"
+        >
+          Objednat
+        </v-btn>
+      </v-list-item>
     </v-list>
   </v-navigation-drawer>
 </template>
