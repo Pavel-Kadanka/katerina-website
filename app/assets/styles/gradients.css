@@ -1,4 +1,4 @@
-/* assets/styles/gradients.css */
+/* assets/styles/gradients.css - Updated for Purple & Pink Theme with Dark Mode Support */
 
 /* ========== Gradient Animations ========== */
 @keyframes gradientShift {
@@ -30,7 +30,6 @@
 }
 
 @keyframes float {
-
     0%,
     100% {
         transform: translateY(0);
@@ -44,21 +43,35 @@
 /* ========== Website Background Gradient ========== */
 .animated-gradient-bg {
     position: relative;
-    background: linear-gradient(135deg, #FDF2F8, #F8F0F5, #F9EBF3, #F5F0F8);
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
     overflow: hidden;
+}
+
+.v-theme--light .animated-gradient-bg {
+    background: linear-gradient(135deg, #FAF7FC, #E8C1D3, #F0D2E4, #F5F0F8);
+}
+
+.v-theme--dark .animated-gradient-bg {
+    background: linear-gradient(135deg, #1A1A2E, #2A2A3E, #16213E, #1F1B24);
 }
 
 .animated-gradient-bg::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 30% 20%, rgba(215, 139, 191, 0.1), rgba(178, 157, 217, 0.1), rgba(255, 153, 200, 0.1), rgba(233, 168, 214, 0.1));
     background-size: 200% 200%;
     animation: radialShift 20s ease infinite;
     opacity: 0.6;
     z-index: 0;
+}
+
+.v-theme--light .animated-gradient-bg::before {
+    background: radial-gradient(circle at 30% 20%, rgba(139, 126, 200, 0.1), rgba(232, 193, 211, 0.1), rgba(212, 157, 201, 0.1), rgba(154, 141, 216, 0.1));
+}
+
+.v-theme--dark .animated-gradient-bg::before {
+    background: radial-gradient(circle at 30% 20%, rgba(154, 141, 216, 0.15), rgba(240, 210, 228, 0.15), rgba(229, 176, 218, 0.15), rgba(169, 156, 232, 0.15));
 }
 
 /* ========== Gradient Button ========== */
@@ -68,23 +81,37 @@
     color: white !important;
     border: none;
     overflow: hidden;
-    background: linear-gradient(135deg, #D78BBF, #FF99C8, #B29DD9);
     background-size: 200% 200%;
     animation: gradientShift 3s ease infinite;
     transition: all 0.3s ease;
 }
 
+.v-theme--light .animated-gradient-btn {
+    background: linear-gradient(135deg, #8B7EC8, #D49DC9, #E8C1D3);
+}
+
+.v-theme--dark .animated-gradient-btn {
+    background: linear-gradient(135deg, #9A8DD8, #E5B0DA, #F0D2E4);
+}
+
 .animated-gradient-btn:hover {
-    background: linear-gradient(135deg, #B29DD9, #FF99C8, #E9A8D6);
     background-size: 200% 200%;
     animation: gradientShift 2s ease infinite;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.v-theme--light .animated-gradient-btn:hover {
+    background: linear-gradient(135deg, #D49DC9, #8B7EC8, #E5B0DA);
+    box-shadow: 0 6px 20px rgba(139, 126, 200, 0.3);
+}
+
+.v-theme--dark .animated-gradient-btn:hover {
+    background: linear-gradient(135deg, #E5B0DA, #9A8DD8, #F0C5EB);
+    box-shadow: 0 6px 20px rgba(154, 141, 216, 0.4);
 }
 
 /* ========== Gradient Text ========== */
 .gradient-text {
-    background: linear-gradient(135deg, #2E2E2E, #666666);
     background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -92,9 +119,42 @@
     animation: gradientShift 5s ease infinite;
 }
 
+.v-theme--light .gradient-text {
+    background: linear-gradient(135deg, #2C3E50, #5A6C7D);
+}
+
+.v-theme--dark .gradient-text {
+    background: linear-gradient(135deg, #FFFFFF, #E8E8E8);
+}
+
+.gradient-text-primary {
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 4s ease infinite;
+}
+
+.v-theme--light .gradient-text-primary {
+    background: linear-gradient(135deg, #8B7EC8, #D49DC9);
+}
+
+.v-theme--dark .gradient-text-primary {
+    background: linear-gradient(135deg, #9A8DD8, #E5B0DA);
+}
+
 /* ========== Floating Icons ========== */
 .floating-icon {
     animation: float 3s ease-in-out infinite;
+    opacity: 0.8;
+}
+
+.v-theme--light .floating-icon {
+    color: #D49DC9;
+}
+
+.v-theme--dark .floating-icon {
+    color: #E5B0DA;
 }
 
 /* ========== Utility Classes ========== */
@@ -118,4 +178,222 @@
 
 .pulse-animation {
     animation: pulse 2s ease-in-out infinite;
+}
+
+/* ========== Spiritual Elements ========== */
+.spiritual-border {
+    border: 2px solid transparent;
+    border-radius: 16px;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+}
+
+.v-theme--light .spiritual-border {
+    background: linear-gradient(45deg, #8B7EC8, #E8C1D3, #D49DC9) border-box;
+}
+
+.v-theme--dark .spiritual-border {
+    background: linear-gradient(45deg, #9A8DD8, #F0D2E4, #E5B0DA) border-box;
+}
+
+.spiritual-shadow {
+    box-shadow: 0 8px 32px rgba(139, 126, 200, 0.15);
+}
+
+.v-theme--dark .spiritual-shadow {
+    box-shadow: 0 8px 32px rgba(154, 141, 216, 0.25);
+}
+
+/* ========== Soft Gradients ========== */
+.soft-gradient-primary {
+    background: linear-gradient(145deg, #FAF7FC, #E8C1D3);
+}
+
+.v-theme--dark .soft-gradient-primary {
+    background: linear-gradient(145deg, #1A1A2E, #2A2A3E);
+}
+
+.soft-gradient-secondary {
+    background: linear-gradient(145deg, #E8C1D3, #F0D2E4);
+}
+
+.v-theme--dark .soft-gradient-secondary {
+    background: linear-gradient(145deg, #2A2A3E, #16213E);
+}
+
+.soft-gradient-accent {
+    background: linear-gradient(145deg, #D49DC9, #E5B0DA);
+}
+
+.v-theme--dark .soft-gradient-accent {
+    background: linear-gradient(145deg, #E5B0DA, #F0C5EB);
+}
+
+/* ========== Hover Effects ========== */
+.hover-lift {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+    transform: translateY(-4px);
+}
+
+.v-theme--light .hover-lift:hover {
+    box-shadow: 0 12px 40px rgba(139, 126, 200, 0.2);
+}
+
+.v-theme--dark .hover-lift:hover {
+    box-shadow: 0 12px 40px rgba(154, 141, 216, 0.3);
+}
+
+/* ========== Decorative Patterns ========== */
+.spiritual-pattern {
+    background-size: 100px 100px;
+}
+
+.v-theme--light .spiritual-pattern {
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(139, 126, 200, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(232, 193, 211, 0.1) 0%, transparent 50%);
+}
+
+.v-theme--dark .spiritual-pattern {
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(154, 141, 216, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(240, 210, 228, 0.15) 0%, transparent 50%);
+}
+
+/* ========== Loading Animation ========== */
+@keyframes spiritualGlow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(139, 126, 200, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(212, 157, 201, 0.5);
+    }
+}
+
+@keyframes spiritualGlowDark {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(154, 141, 216, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(229, 176, 218, 0.6);
+    }
+}
+
+.spiritual-glow {
+    animation: spiritualGlow 2s ease-in-out infinite;
+}
+
+.v-theme--dark .spiritual-glow {
+    animation: spiritualGlowDark 2s ease-in-out infinite;
+}
+
+/* ========== Text Visibility Enhancements ========== */
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.v-theme--light .hero-content {
+    color: #2C3E50;
+}
+
+.v-theme--dark .hero-content {
+    color: #FFFFFF;
+}
+
+/* Ensure text is visible on gradient backgrounds */
+.v-theme--light .animated-gradient-bg .text-secondary {
+    color: #4A5568 !important;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.v-theme--dark .animated-gradient-bg .text-secondary {
+    color: #E8E8E8 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.v-theme--light .animated-gradient-bg .text-primary {
+    color: #2C3E50 !important;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.v-theme--dark .animated-gradient-bg .text-primary {
+    color: #FFFFFF !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* ========== Card Specific Styles ========== */
+.service-preview-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid transparent;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)) padding-box;
+}
+
+.v-theme--light .service-preview-card {
+    border-color: rgba(139, 126, 200, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.v-theme--dark .service-preview-card {
+    border-color: rgba(154, 141, 216, 0.3);
+    background: linear-gradient(135deg, rgba(42, 42, 62, 0.9), rgba(42, 42, 62, 0.7)) padding-box;
+    backdrop-filter: blur(10px);
+}
+
+.testimonial-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid transparent;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85)) padding-box;
+}
+
+.v-theme--light .testimonial-card {
+    border-color: rgba(212, 157, 201, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.v-theme--dark .testimonial-card {
+    border-color: rgba(229, 176, 218, 0.3);
+    background: linear-gradient(135deg, rgba(42, 42, 62, 0.95), rgba(42, 42, 62, 0.85)) padding-box;
+    backdrop-filter: blur(10px);
+}
+
+.cta-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid transparent;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9)) padding-box;
+}
+
+.v-theme--light .cta-card {
+    border-color: rgba(139, 126, 200, 0.3);
+    backdrop-filter: blur(15px);
+}
+
+.v-theme--dark .cta-card {
+    border-color: rgba(154, 141, 216, 0.4);
+    background: linear-gradient(135deg, rgba(42, 42, 62, 0.95), rgba(42, 42, 62, 0.9)) padding-box;
+    backdrop-filter: blur(15px);
+}
+
+.cta-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(139, 126, 200, 0.1), rgba(212, 157, 201, 0.1));
+    z-index: 0;
+}
+
+.v-theme--dark .cta-section::before {
+    background: linear-gradient(135deg, rgba(154, 141, 216, 0.15), rgba(229, 176, 218, 0.15));
 }

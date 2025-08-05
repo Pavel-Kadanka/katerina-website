@@ -1,31 +1,27 @@
 <template>
   <div>
-    <!-- Hero Section -->
-    <v-container fluid class="hero-section pa-0">
-      <v-row no-gutters class="align-center" style="min-height: 60vh;">
-        <v-col cols="12" class="text-center">
-          <div class="hero-content">
-            <v-icon size="64" color="primary" class="mb-4">mdi-account</v-icon>
-            <h1 class="text-h2 text-md-h1 font-weight-bold text-primary mb-4">
-              O mně
-            </h1>
-            <p class="text-h5 text-secondary max-width-600 mx-auto">
-              Moje cesta k Reiki a šamanismu
-            </p>
-          </div>
-        </v-col>
-      </v-row>
-    </v-container>
-
     <!-- Main Content -->
-    <v-container class="py-16">
+    <v-container class="section-container">
       <v-row justify="center">
         <v-col cols="12" lg="10">
+          <!-- Header Section -->
+          <v-row class="mb-16 mt-8">
+            <v-col cols="12" class="text-center">
+              <h2 class="text-h3 text-md-h2 font-weight-bold gradient-text-primary mb-4 scroll-animate">
+                O mně
+              </h2>
+              <div class="spiritual-divider mx-auto scroll-animate" style="width: 100px;"></div>
+              <p class="text-h6 text-secondary max-width-600 mx-auto mt-4 scroll-animate">
+                Poznejte mou cestu k energetickému léčení a filozofii uzdravení
+              </p>
+            </v-col>
+          </v-row>
+
           <!-- My Journey Section -->
           <v-row class="mb-16">
-            <v-col cols="12" md="6" class="d-flex align-center">
+            <v-col cols="12" md="6" class="d-flex align-center scroll-animate-left">
               <div>
-                <h2 class="text-h3 text-md-h2 font-weight-bold text-primary mb-6">
+                <h2 class="text-h3 text-md-h2 font-weight-bold text-accent mb-6">
                   Moje cesta k Reiki a šamanismu
                 </h2>
                 <p class="text-body-1 text-secondary mb-4">
@@ -45,36 +41,28 @@
                 </p>
               </div>
             </v-col>
-            <v-col cols="12" md="6" class="d-flex justify-center">
-              <v-card
-                class="journey-image-card pa-8"
-                :color="$vuetify.theme.current.dark ? 'surface' : 'accent'"
-                elevation="2"
-                rounded="xl"
-                max-width="400"
-              >
+            <v-col cols="12" md="6" rounded="xl" class="d-flex align-center justify-center scroll-animate-right soft-gradient-primary">
                 <div class="text-center">
-                  <v-icon size="80" color="primary" class="mb-4">mdi-heart-pulse</v-icon>
+                  <v-icon size="80" color="accent" class="mb-4 floating-icon">mdi-heart-pulse</v-icon>
                   <h3 class="text-h5 font-weight-bold text-primary mb-3">10+ let zkušeností</h3>
                   <p class="text-body-2 text-secondary">
                     Více než deset let se věnuji energetickému léčení a pomáhám lidem najít jejich vnitřní sílu
                   </p>
                 </div>
-              </v-card>
-            </v-col>
+              </v-col>
           </v-row>
 
           <!-- My Philosophy Section -->
           <v-row class="mb-16">
-            <v-col cols="12" class="text-center">
+            <v-col cols="12" class="text-center scroll-animate-scale">
               <v-card
-                class="philosophy-card pa-8"
-                :color="$vuetify.theme.current.dark ? 'surface' : 'background'"
+                class="philosophy-card pa-8 hover-lift spiritual-shadow"
+                color="surface"
                 elevation="2"
                 rounded="xl"
               >
-                <v-icon size="64" color="secondary" class="mb-6">mdi-lightbulb</v-icon>
-                <h2 class="text-h3 text-md-h2 font-weight-bold text-primary mb-6">
+                <v-icon size="64" color="accent" class="mb-6 floating-icon">mdi-lightbulb</v-icon>
+                <h2 class="text-h3 text-md-h2 font-weight-bold text-accent mb-6">
                   Moje filozofie
                 </h2>
                 <blockquote class="text-h5 text-md-h4 font-weight-light text-primary mb-6 max-width-800 mx-auto">
@@ -97,103 +85,94 @@
           <!-- Education & Certifications -->
           <v-row>
             <v-col cols="12" class="text-center mb-8">
-              <h2 class="text-h3 text-md-h2 font-weight-bold text-primary mb-4">
+              <h2 class="text-h3 text-md-h2 font-weight-bold gradient-text-primary mb-4 scroll-animate">
                 Vzdělání a certifikace
               </h2>
-              <p class="text-h6 text-secondary max-width-600 mx-auto">
-                Průběžně se vzdělávám a rozšiřuji své znalosti v oblasti energetického léčení
+              <div class="spiritual-divider mx-auto scroll-animate" style="width: 100px;"></div>
+              <p class="text-h6 text-secondary max-width-600 mx-auto mt-4 scroll-animate">
+                Moje vzdělání a odborné certifikace v oblasti energetického léčení
               </p>
             </v-col>
           </v-row>
-          
+
           <v-row>
             <v-col cols="12" md="4" class="mb-6">
               <v-card
-                class="certification-card h-100 pa-6 text-center"
-                :color="$vuetify.theme.current.dark ? 'surface' : 'background'"
-                elevation="2"
+                class="certification-card h-100 pa-6 text-center hover-lift spiritual-shadow"
+                color="surface"
+                elevation="3"
                 rounded="xl"
               >
-                <v-icon size="64" color="primary" class="mb-4">mdi-certificate</v-icon>
+                <v-icon size="48" color="accent" class="mb-4 floating-icon">mdi-certificate</v-icon>
                 <h3 class="text-h5 font-weight-bold text-primary mb-3">Reiki Master</h3>
-                <p class="text-subtitle-1 text-cta font-weight-bold mb-2">Certifikace 2018</p>
-                <p class="text-body-2 text-secondary">
-                  Kompletní výcvik v Reiki terapii všech tří stupňů, včetně pokročilých technik 
-                  energetického léčení a práce s čakrami.
-                </p>
+                <p class="text-body-2 text-secondary mb-3">Certifikace Reiki Master</p>
+                <p class="text-caption text-secondary">2015 - současnost</p>
               </v-card>
             </v-col>
-            
+
             <v-col cols="12" md="4" class="mb-6">
               <v-card
-                class="certification-card h-100 pa-6 text-center"
-                :color="$vuetify.theme.current.dark ? 'surface' : 'background'"
-                elevation="2"
+                class="certification-card h-100 pa-6 text-center hover-lift spiritual-shadow"
+                color="surface"
+                elevation="3"
                 rounded="xl"
               >
-                <v-icon size="64" color="secondary" class="mb-4">mdi-star</v-icon>
+                <v-icon size="48" color="accent" class="mb-4 floating-icon">mdi-star</v-icon>
                 <h3 class="text-h5 font-weight-bold text-primary mb-3">Šamanské léčení</h3>
-                <p class="text-subtitle-1 text-cta font-weight-bold mb-2">Výcvik 2020</p>
-                <p class="text-body-2 text-secondary">
-                  Intenzivní výcvik v šamanských technikách, práci s duší, léčení traumatu 
-                  a duchovním průvodcovství.
-                </p>
+                <p class="text-body-2 text-secondary mb-3">Výcvik v šamanském léčení</p>
+                <p class="text-caption text-secondary">2018 - současnost</p>
               </v-card>
             </v-col>
-            
+
             <v-col cols="12" md="4" class="mb-6">
               <v-card
-                class="certification-card h-100 pa-6 text-center"
-                :color="$vuetify.theme.current.dark ? 'surface' : 'background'"
-                elevation="2"
+                class="certification-card h-100 pa-6 text-center hover-lift spiritual-shadow"
+                color="surface"
+                elevation="3"
                 rounded="xl"
               >
-                <v-icon size="64" color="cta" class="mb-4">mdi-school</v-icon>
-                <h3 class="text-h5 font-weight-bold text-primary mb-3">Energetická medicína</h3>
-                <p class="text-subtitle-1 text-cta font-weight-bold mb-2">Pokračující vzdělávání</p>
-                <p class="text-body-2 text-secondary">
-                  Průběžné vzdělávání v oblasti energetické medicíny, anatomie energetického těla 
-                  a moderních přístupů k léčení.
-                </p>
+                <v-icon size="48" color="accent" class="mb-4 floating-icon">mdi-heart</v-icon>
+                <h3 class="text-h5 font-weight-bold text-primary mb-3">Energetické léčení</h3>
+                <p class="text-body-2 text-secondary mb-3">Kurzy energetického léčení</p>
+                <p class="text-caption text-secondary">2013 - současnost</p>
               </v-card>
             </v-col>
           </v-row>
 
-          <!-- Personal Touch -->
+          <!-- Personal Story -->
           <v-row class="mt-16">
             <v-col cols="12" class="text-center">
+              <h2 class="text-h3 text-md-h2 font-weight-bold gradient-text-primary mb-4 scroll-animate">
+                Můj příběh
+              </h2>
+              <div class="spiritual-divider mx-auto scroll-animate" style="width: 100px;"></div>
+            </v-col>
+          </v-row>
+
+          <v-row class="mb-16">
+            <v-col cols="12" class="text-center scroll-animate">
               <v-card
-                class="personal-card pa-8"
-                :color="$vuetify.theme.current.dark ? 'surface' : 'accent'"
-                elevation="2"
+                class="story-card pa-8"
+                color="surface"
+                elevation="3"
                 rounded="xl"
               >
-                <h2 class="text-h3 text-md-h2 font-weight-bold text-primary mb-6">
-                  Proč si vybrat právě mě?
-                </h2>
-                <v-row>
-                  <v-col cols="12" md="4" class="text-center mb-4">
-                    <v-icon size="48" color="primary" class="mb-3">mdi-heart</v-icon>
-                    <h4 class="text-h6 font-weight-bold text-primary mb-2">Empatie a porozumění</h4>
-                    <p class="text-body-2 text-secondary">
-                      Každý klient je pro mě jedinečný a přistupuji k němu s otevřeným srdcem
-                    </p>
-                  </v-col>
-                  <v-col cols="12" md="4" class="text-center mb-4">
-                    <v-icon size="48" color="secondary" class="mb-3">mdi-shield-check</v-icon>
-                    <h4 class="text-h6 font-weight-bold text-primary mb-2">Bezpečný prostor</h4>
-                    <p class="text-body-2 text-secondary">
-                      Vytvářím důvěrné a bezpečné prostředí pro vaše uzdravení
-                    </p>
-                  </v-col>
-                  <v-col cols="12" md="4" class="text-center mb-4">
-                    <v-icon size="48" color="cta" class="mb-3">mdi-lightning-bolt</v-icon>
-                    <h4 class="text-h6 font-weight-bold text-primary mb-2">Intuice a zkušenost</h4>
-                    <p class="text-body-2 text-secondary">
-                      Kombinuji intuitivní přístup s letitými zkušenostmi a vzděláním
-                    </p>
-                  </v-col>
-                </v-row>
+                <p class="text-body-1 text-secondary mb-4">
+                  Jmenuji se Kateřina Patyková a jsem certifikovaná terapeutka Reiki a šamanského léčení. 
+                  Moje cesta k energetickému léčení začala před více než deseti lety, kdy jsem sama procházela 
+                  náročným obdobím a hledala způsob, jak najít vnitřní klid a harmonii.
+                </p>
+                <p class="text-body-1 text-secondary mb-4">
+                  První setkání s Reiki bylo pro mě zlomovým momentem. Pocítila jsem, jak jemná energie 
+                  proniká mým tělem a přináší mi úlevu a uvolnění, které jsem dlouho postrádala. 
+                  Od té chvíle jsem věděla, že chci tuto léčivou sílu předávat dál a pomáhat druhým 
+                  na jejich cestě k uzdravení.
+                </p>
+                <p class="text-body-1 text-secondary">
+                  Dnes se věnuji energetickému léčení na plný úvazek a každý den jsem vděčná za možnost 
+                  být součástí uzdravovacího procesu mých klientů. Věřím, že každý z nás má v sobě 
+                  přirozenou schopnost uzdravit se a moje role je být průvodcem na této cestě.
+                </p>
               </v-card>
             </v-col>
           </v-row>
@@ -202,32 +181,45 @@
     </v-container>
 
     <!-- Call to Action -->
-    <v-container fluid class="cta-section py-16">
+    <v-container class="section-container soft-gradient-primary">
       <v-row justify="center">
-        <v-col cols="12" md="8" class="text-center">
+        <v-col cols="12" md="8" class="text-center scroll-animate-scale">
           <v-card
             class="cta-card pa-8"
-            color="primary"
+            color="surface"
             elevation="4"
             rounded="xl"
           >
-            <h2 class="text-h3 text-md-h2 font-weight-bold text-white mb-4">
-              Začněme společně vaši cestu
+            <h2 class="text-h3 text-md-h2 font-weight-bold gradient-text-primary mb-4">
+              Začněme společně vaši cestu k uzdravení
             </h2>
-            <p class="text-h6 text-white mb-8">
-              Objednejte si své první sezení a poznejte sílu energetického léčení
+            <p class="text-h6 text-secondary mb-8">
+              Objednejte si své první sezení a objevte sílu energetického léčení
             </p>
-            <v-btn
-              to="/objednani"
-              size="x-large"
-              color="cta"
-              variant="elevated"
-              class="text-body-1 font-weight-medium"
-              rounded="pill"
-            >
-              <v-icon start>mdi-calendar-check</v-icon>
-              Objednat sezení
-            </v-btn>
+            <div class="d-flex flex-column flex-md-row gap-4 justify-center">
+              <v-btn
+                to="/objednani"
+                size="large"
+                color="accent"
+                variant="elevated"
+                class="text-body-1 font-weight-medium animated-gradient-btn ma-2"
+                rounded="xl"
+              >
+                <v-icon start>mdi-calendar-check</v-icon>
+                Objednat sezení
+              </v-btn>
+              <v-btn
+                to="/kontakt"
+                size="large"
+                color="primary"
+                variant="outlined"
+                class="text-body-1 font-weight-medium ma-2"
+                rounded="xl"
+              >
+                <v-icon start>mdi-email</v-icon>
+                Kontaktovat
+              </v-btn>
+            </div>
           </v-card>
         </v-col>
       </v-row>
@@ -238,11 +230,13 @@
 <script setup>
 // Page metadata
 useHead({
-  title: 'O mně - Kateřina Patyková',
+  title: 'O mně - Reiki & Šamanské léčení | Kateřina Patyková',
   meta: [
-    { name: 'description', content: 'Poznejte mou cestu k Reiki a šamanismu, moji filozofii a vzdělání. Certifikovaná terapeutka s více než 10 lety zkušeností.' }
+    { name: 'description', content: 'Poznejte Kateřinu Patykovou - certifikovanou terapeutku Reiki a šamanského léčení s více než 10 lety zkušeností. Moje cesta k energetickému léčení.' }
   ]
 })
+
+// GSAP animations are handled globally in app.vue
 </script>
 
 <style scoped>

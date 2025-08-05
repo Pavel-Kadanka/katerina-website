@@ -1,0 +1,148 @@
+/* ===== GLOBAL PAGE TRANSITIONS ===== */
+
+/* Page enter transition */
+.page-enter-active {
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.page-enter-from {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-enter-to {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Page leave transition */
+.page-leave-active {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.page-leave-from {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+/* ===== SCROLL ANIMATION UTILITIES ===== */
+
+/* Base animation classes for GSAP */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  will-change: opacity, transform;
+}
+
+.scroll-animate-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  will-change: opacity, transform;
+}
+
+.scroll-animate-right {
+  opacity: 0;
+  transform: translateX(30px);
+  will-change: opacity, transform;
+}
+
+.scroll-animate-scale {
+  opacity: 0;
+  transform: scale(0.95);
+  will-change: opacity, transform;
+}
+
+/* Stagger animation classes */
+.stagger-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  will-change: opacity, transform;
+}
+
+/* ===== VUETIFY TRANSITION ENHANCEMENTS ===== */
+
+/* Smooth fade transitions */
+.v-fade-transition-enter-active,
+.v-fade-transition-leave-active {
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.v-fade-transition-enter-from,
+.v-fade-transition-leave-to {
+  opacity: 0;
+}
+
+/* Expand transitions with easing */
+.v-expand-transition-enter-active,
+.v-expand-transition-leave-active {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.v-expand-transition-enter-from,
+.v-expand-transition-leave-to {
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+/* ===== PERFORMANCE OPTIMIZATIONS ===== */
+
+/* Hardware acceleration for animations */
+.animate-gpu {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Fallback for stagger animations - ensure items are visible */
+.stagger-item {
+  opacity: 1;
+  transform: none;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .page-enter-active,
+  .page-leave-active,
+  .v-fade-transition-enter-active,
+  .v-fade-transition-leave-active,
+  .v-expand-transition-enter-active,
+  .v-expand-transition-leave-active {
+    transition: none !important;
+  }
+  
+  .scroll-animate,
+  .scroll-animate-left,
+  .scroll-animate-right,
+  .scroll-animate-scale,
+  .stagger-animate {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  
+  .stagger-item {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ===== MOBILE OPTIMIZATIONS ===== */
+
+@media (max-width: 768px) {
+  .page-enter-active,
+  .page-leave-active {
+    transition-duration: 0.4s;
+  }
+  
+  .scroll-animate,
+  .scroll-animate-left,
+  .scroll-animate-right {
+    transform: translateY(20px);
+  }
+} 

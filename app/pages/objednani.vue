@@ -1,31 +1,27 @@
 <template>
   <div>
-    <!-- Hero Section -->
-    <v-container fluid class="hero-section pa-0">
-      <v-row no-gutters class="align-center" style="min-height: 60vh;">
-        <v-col cols="12" class="text-center">
-          <div class="hero-content">
-            <v-icon size="64" color="primary" class="mb-4">mdi-calendar-check</v-icon>
-            <h1 class="text-h2 text-md-h1 font-weight-bold text-primary mb-4">
-              Objednání
-            </h1>
-            <p class="text-h5 text-secondary max-width-600 mx-auto">
-              Rezervujte si své sezení a začněte cestu k uzdravení
-            </p>
-          </div>
-        </v-col>
-      </v-row>
-    </v-container>
-
     <!-- Booking Content -->
-    <v-container class="py-16">
+    <v-container class="section-container">
       <v-row justify="center">
         <v-col cols="12" lg="10">
+          <!-- Page Header -->
+          <v-row class="mb-16 mt-8">
+            <v-col cols="12" class="text-center">
+              <h2 class="text-h3 text-md-h2 font-weight-bold gradient-text-primary mb-4 scroll-animate">
+                Objednání sezení
+              </h2>
+              <div class="spiritual-divider mx-auto scroll-animate" style="width: 100px;"></div>
+              <p class="text-h6 text-secondary max-width-600 mx-auto mt-4 scroll-animate">
+                Rezervujte si své sezení Reiki nebo šamanského léčení
+              </p>
+            </v-col>
+          </v-row>
+
           <!-- How to Book -->
           <v-row class="mb-16">
-            <v-col cols="12" md="6" class="d-flex align-center">
+            <v-col cols="12" md="6" class="d-flex align-center scroll-animate-left">
               <div>
-                <h2 class="text-h3 text-md-h2 font-weight-bold text-primary mb-6">
+                <h2 class="text-h3 text-md-h2 font-weight-bold text-accent mb-6">
                   Jak se objednat
                 </h2>
                 <p class="text-body-1 text-secondary mb-4">
@@ -39,21 +35,21 @@
                 
                 <div class="d-flex flex-column gap-4">
                   <div class="d-flex align-center">
-                    <v-icon color="primary" class="mr-3">mdi-phone</v-icon>
+                    <v-icon color="accent" class="mr-3">mdi-phone</v-icon>
                     <div>
                       <div class="text-subtitle-1 font-weight-bold text-primary">Telefonicky</div>
                       <div class="text-body-2 text-secondary">+420 123 456 789</div>
                     </div>
                   </div>
                   <div class="d-flex align-center">
-                    <v-icon color="secondary" class="mr-3">mdi-email</v-icon>
+                    <v-icon color="accent" class="mr-3">mdi-email</v-icon>
                     <div>
                       <div class="text-subtitle-1 font-weight-bold text-primary">Emailem</div>
                       <div class="text-body-2 text-secondary">katerina.patykova@email.cz</div>
                     </div>
                   </div>
                   <div class="d-flex align-center">
-                    <v-icon color="cta" class="mr-3">mdi-calendar</v-icon>
+                    <v-icon color="accent" class="mr-3">mdi-calendar</v-icon>
                     <div>
                       <div class="text-subtitle-1 font-weight-bold text-primary">Online formulář</div>
                       <div class="text-body-2 text-secondary">Vyplňte formulář níže</div>
@@ -62,16 +58,16 @@
                 </div>
               </div>
             </v-col>
-            <v-col cols="12" md="6" class="d-flex justify-center">
+            <v-col cols="12" md="6" class="d-flex justify-center scroll-animate-right">
               <v-card
-                class="booking-info-card pa-8"
-                :color="$vuetify.theme.current.dark ? 'surface' : 'accent'"
+                class="booking-info-card pa-8 hover-lift spiritual-shadow"
+                color="surface"
                 elevation="2"
                 rounded="xl"
                 max-width="400"
               >
                 <div class="text-center">
-                  <v-icon size="80" color="primary" class="mb-4">mdi-clock</v-icon>
+                  <v-icon size="80" color="accent" class="mb-4 floating-icon">mdi-clock</v-icon>
                   <h3 class="text-h5 font-weight-bold text-primary mb-3">Otevírací doba</h3>
                   <div class="text-body-2 text-secondary text-left">
                     <div class="d-flex justify-space-between mb-2">
@@ -84,9 +80,9 @@
                     </div>
                     <div class="d-flex justify-space-between mb-4">
                       <span>Neděle:</span>
-                      <span class="font-weight-bold">zavřeno</span>
+                      <span class="font-weight-bold">Zavřeno</span>
                     </div>
-                    <v-divider class="my-4"></v-divider>
+                    <div class="spiritual-divider my-4"></div>
                     <div class="text-caption text-secondary">
                       První sezení doporučuji rezervovat s dostatečným časovým předstihem
                     </div>
@@ -97,50 +93,38 @@
           </v-row>
 
           <!-- Booking Form -->
-          <v-row class="mb-16">
-            <v-col cols="12" class="text-center mb-8">
-              <h2 class="text-h3 text-md-h2 font-weight-bold text-primary mb-4">
+          <v-row class="mb-8">
+            <v-col cols="12" class="text-center">
+              <h2 class="text-h3 text-md-h2 font-weight-bold gradient-text-primary mb-4 scroll-animate">
                 Rezervační formulář
               </h2>
-              <p class="text-h6 text-secondary max-width-600 mx-auto">
+              <div class="spiritual-divider mx-auto scroll-animate" style="width: 100px;"></div>
+              <p class="text-h6 text-secondary max-width-600 mx-auto mt-4 scroll-animate">
                 Vyplňte formulář a já se vám ozvu s potvrzením termínu
               </p>
             </v-col>
           </v-row>
 
-          <v-row justify="center">
-            <v-col cols="12" md="8">
+          <v-row justify="center" class="mb-16">
+            <v-col cols="12" md="8" class="scroll-animate-scale">
               <v-card
                 class="booking-form-card pa-8"
-                :color="$vuetify.theme.current.dark ? 'surface' : 'background'"
-                elevation="3"
+                color="surface"
+                elevation="4"
                 rounded="xl"
               >
                 <v-form @submit.prevent="submitBooking">
                   <v-row>
                     <v-col cols="12" md="6">
                       <v-text-field
-                        v-model="bookingForm.firstName"
-                        label="Jméno *"
+                        v-model="bookingForm.name"
+                        label="Vaše jméno *"
                         variant="outlined"
                         color="primary"
                         required
-                        :rules="[rules.required]"
+                        class="mb-4"
                       ></v-text-field>
                     </v-col>
-                    <v-col cols="12" md="6">
-                      <v-text-field
-                        v-model="bookingForm.lastName"
-                        label="Příjmení *"
-                        variant="outlined"
-                        color="primary"
-                        required
-                        :rules="[rules.required]"
-                      ></v-text-field>
-                    </v-col>
-                  </v-row>
-
-                  <v-row>
                     <v-col cols="12" md="6">
                       <v-text-field
                         v-model="bookingForm.email"
@@ -149,9 +133,12 @@
                         color="primary"
                         type="email"
                         required
-                        :rules="[rules.required, rules.email]"
+                        class="mb-4"
                       ></v-text-field>
                     </v-col>
+                  </v-row>
+
+                  <v-row>
                     <v-col cols="12" md="6">
                       <v-text-field
                         v-model="bookingForm.phone"
@@ -159,128 +146,146 @@
                         variant="outlined"
                         color="primary"
                         required
-                        :rules="[rules.required]"
+                        class="mb-4"
                       ></v-text-field>
                     </v-col>
-                  </v-row>
-
-                  <v-row>
                     <v-col cols="12" md="6">
                       <v-select
-                        v-model="bookingForm.serviceType"
-                        label="Typ terapie *"
+                        v-model="bookingForm.service"
+                        label="Typ sezení *"
                         variant="outlined"
                         color="primary"
-                        :items="serviceTypes"
+                        :items="services"
                         required
-                        :rules="[rules.required]"
-                      ></v-select>
-                    </v-col>
-                    <v-col cols="12" md="6">
-                      <v-select
-                        v-model="bookingForm.preferredDate"
-                        label="Preferovaný termín *"
-                        variant="outlined"
-                        color="primary"
-                        :items="availableDates"
-                        required
-                        :rules="[rules.required]"
+                        class="mb-4"
                       ></v-select>
                     </v-col>
                   </v-row>
 
                   <v-row>
-                    <v-col cols="12">
-                      <v-textarea
-                        v-model="bookingForm.notes"
-                        label="Poznámky"
-                        variant="outlined"
-                        color="primary"
-                        rows="4"
-                        placeholder="Napište mi něco o vašich problémech nebo očekáváních..."
-                      ></v-textarea>
-                    </v-col>
-                  </v-row>
-
-                  <v-row>
-                    <v-col cols="12" class="text-center">
-                      <v-btn
-                        type="submit"
-                        size="x-large"
-                        color="cta"
-                        variant="elevated"
-                        class="text-body-1 font-weight-medium"
-                        rounded="pill"
-                        :loading="isSubmitting"
-                        :disabled="isSubmitting"
+                    <v-col cols="12" md="6">
+                      <v-menu
+                        v-model="dateMenu"
+                        :close-on-content-click="false"
+                        transition="scale-transition"
+                        offset-y
+                        min-width="auto"
                       >
-                        <v-icon start>mdi-send</v-icon>
-                        Odeslat rezervaci
-                      </v-btn>
+                        <template v-slot:activator="{ props }">
+                          <v-text-field
+                            v-model="bookingForm.date"
+                            label="Preferovaný datum *"
+                            variant="outlined"
+                            color="primary"
+                            readonly
+                            v-bind="props"
+                            required
+                            class="mb-4"
+                          ></v-text-field>
+                        </template>
+                        <v-date-picker
+                          v-model="bookingForm.date"
+                          @update:model-value="dateMenu = false"
+                          :min="minDate"
+                        ></v-date-picker>
+                      </v-menu>
+                    </v-col>
+                    <v-col cols="12" md="6">
+                      <v-select
+                        v-model="bookingForm.time"
+                        label="Preferovaný čas *"
+                        variant="outlined"
+                        color="primary"
+                        :items="timeSlots"
+                        required
+                        class="mb-4"
+                      ></v-select>
                     </v-col>
                   </v-row>
+
+                  <v-textarea
+                    v-model="bookingForm.message"
+                    label="Poznámky nebo dotazy"
+                    variant="outlined"
+                    color="primary"
+                    rows="4"
+                    class="mb-6"
+                    placeholder="Napište mi, pokud máte nějaké speciální požadavky nebo dotazy..."
+                  ></v-textarea>
+
+                  <div class="d-flex justify-center">
+                    <v-btn
+                      type="submit"
+                      color="accent"
+                      size="large"
+                      class="animated-gradient-btn"
+                      rounded="xl"
+                      :loading="loading"
+                    >
+                      <v-icon start>mdi-calendar-check</v-icon>
+                      Odeslat rezervaci
+                    </v-btn>
+                  </div>
                 </v-form>
               </v-card>
             </v-col>
           </v-row>
 
-          <!-- Booking Conditions -->
-          <v-row class="mt-16">
-            <v-col cols="12" class="text-center mb-8">
-              <h2 class="text-h3 text-md-h2 font-weight-bold text-primary mb-4">
-                Rezervační podmínky
+          <!-- Important Information -->
+          <v-row>
+            <v-col cols="12" class="text-center">
+              <h2 class="text-h3 text-md-h2 font-weight-bold gradient-text-primary mb-4 scroll-animate">
+                Důležité informace
               </h2>
-              <p class="text-h6 text-secondary max-width-600 mx-auto">
-                Důležité informace o rezervaci a zrušení sezení
-              </p>
+              <div class="spiritual-divider mx-auto scroll-animate" style="width: 100px;"></div>
             </v-col>
           </v-row>
 
           <v-row>
             <v-col cols="12" md="4" class="mb-6">
               <v-card
-                class="condition-card h-100 pa-6 text-center"
-                :color="$vuetify.theme.current.dark ? 'surface' : 'background'"
-                elevation="2"
+                class="info-card h-100 pa-6 text-center hover-lift spiritual-shadow"
+                color="surface"
+                elevation="3"
                 rounded="xl"
               >
-                <v-icon size="48" color="primary" class="mb-4">mdi-clock-alert</v-icon>
+                <v-icon size="48" color="accent" class="mb-4 floating-icon">mdi-clock-alert</v-icon>
+                <h3 class="text-h5 font-weight-bold text-primary mb-3">Časová rezerva</h3>
+                <p class="text-body-2 text-secondary">
+                  Doporučuji rezervaci alespoň 3-5 dní dopředu, zejména pro první sezení. 
+                  Víkendové termíny jsou velmi žádané.
+                </p>
+              </v-card>
+            </v-col>
+
+            <v-col cols="12" md="4" class="mb-6">
+              <v-card
+                class="info-card h-100 pa-6 text-center hover-lift spiritual-shadow"
+                color="surface"
+                elevation="3"
+                rounded="xl"
+              >
+                <v-icon size="48" color="accent" class="mb-4 floating-icon">mdi-cancel</v-icon>
                 <h3 class="text-h5 font-weight-bold text-primary mb-3">Zrušení sezení</h3>
                 <p class="text-body-2 text-secondary">
-                  Zrušení sezení je možné nejpozději 24 hodin předem. 
-                  Při pozdějším zrušení se účtuje 50% ceny sezení.
+                  Zrušení sezení je možné do 24 hodin před začátkem. 
+                  Pozdější zrušení může být zpoplatněno.
                 </p>
               </v-card>
             </v-col>
 
             <v-col cols="12" md="4" class="mb-6">
               <v-card
-                class="condition-card h-100 pa-6 text-center"
-                :color="$vuetify.theme.current.dark ? 'surface' : 'background'"
-                elevation="2"
+                class="info-card h-100 pa-6 text-center hover-lift spiritual-shadow"
+                color="surface"
+                elevation="3"
                 rounded="xl"
               >
-                <v-icon size="48" color="secondary" class="mb-4">mdi-calendar-clock</v-icon>
-                <h3 class="text-h5 font-weight-bold text-primary mb-3">První sezení</h3>
+                <v-icon size="48" color="accent" class="mb-4 floating-icon">mdi-credit-card-off</v-icon>
+                <h3 class="text-h5 font-weight-bold text-primary mb-3">Platba</h3>
                 <p class="text-body-2 text-secondary">
-                  První sezení doporučuji rezervovat s dostatečným časovým předstihem. 
-                  Přijďte prosím 10 minut před začátkem sezení.
-                </p>
-              </v-card>
-            </v-col>
-
-            <v-col cols="12" md="4" class="mb-6">
-              <v-card
-                class="condition-card h-100 pa-6 text-center"
-                :color="$vuetify.theme.current.dark ? 'surface' : 'background'"
-                elevation="2"
-                rounded="xl"
-              >
-                <v-icon size="48" color="cta" class="mb-4">mdi-information</v-icon>
-                <h3 class="text-h5 font-weight-bold text-primary mb-3">Důležité upozornění</h3>
-                <p class="text-body-2 text-secondary">
-                  Terapeutická sezení nenahrazují lékařskou péči. 
-                  Při zdravotních problémech se vždy poraďte s lékařem.
+                  Platba probíhá na místě v hotovosti. Fakturu vystavuji na požádání. 
+                  Ceny najdete v sekci Služby.
                 </p>
               </v-card>
             </v-col>
@@ -289,26 +294,37 @@
       </v-row>
     </v-container>
 
-    <!-- Success Dialog -->
-    <v-dialog v-model="showSuccessDialog" max-width="500">
-      <v-card class="pa-6" rounded="xl">
-        <div class="text-center">
-          <v-icon size="64" color="success" class="mb-4">mdi-check-circle</v-icon>
-          <h3 class="text-h5 font-weight-bold text-primary mb-3">Rezervace odeslána!</h3>
-          <p class="text-body-1 text-secondary mb-6">
-            Děkujeme za vaši rezervaci. Ozvu se vám do 24 hodin s potvrzením termínu.
-          </p>
-          <v-btn
-            color="primary"
-            variant="elevated"
-            @click="showSuccessDialog = false"
-            rounded="pill"
+    <!-- Call to Action -->
+    <v-container class="section-container soft-gradient-primary">
+      <v-row justify="center">
+        <v-col cols="12" md="8" class="text-center scroll-animate-scale">
+          <v-card
+            class="cta-card pa-8"
+            color="surface"
+            elevation="4"
+            rounded="xl"
           >
-            Zavřít
-          </v-btn>
-        </div>
-      </v-card>
-    </v-dialog>
+            <h2 class="text-h3 text-md-h2 font-weight-bold gradient-text-primary mb-4">
+              Máte otázky?
+            </h2>
+            <p class="text-h6 text-secondary mb-8">
+              Neváhejte mě kontaktovat, pokud potřebujete více informací nebo máte dotazy
+            </p>
+            <v-btn
+              to="/kontakt"
+              size="large"
+              color="accent"
+              variant="elevated"
+              class="text-body-1 font-weight-medium animated-gradient-btn"
+              rounded="xl"
+            >
+              <v-icon start>mdi-email</v-icon>
+              Kontaktovat
+            </v-btn>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
@@ -317,70 +333,74 @@ import { ref } from 'vue'
 
 // Page metadata
 useHead({
-  title: 'Objednání - Kateřina Patyková',
+  title: 'Objednání - Reiki & Šamanské léčení | Kateřina Patyková',
   meta: [
-    { name: 'description', content: 'Objednejte si Reiki nebo šamanské léčení. Rezervační formulář a informace o objednávce. Certifikovaná terapeutka v Brně.' }
+    { name: 'description', content: 'Objednejte si sezení Reiki nebo šamanského léčení. Online rezervační formulář, telefon a email. Začněte svou cestu k uzdravení.' }
   ]
 })
 
+// GSAP animations are handled globally in app.vue
+
 // Form data
 const bookingForm = ref({
-  firstName: '',
-  lastName: '',
+  name: '',
   email: '',
   phone: '',
-  serviceType: '',
-  preferredDate: '',
-  notes: ''
+  service: '',
+  date: '',
+  time: '',
+  message: ''
 })
 
-const isSubmitting = ref(false)
-const showSuccessDialog = ref(false)
+const loading = ref(false)
+const dateMenu = ref(false)
 
-// Form options
-const serviceTypes = [
-  { title: 'Reiki léčení (1 200 Kč)', value: 'reiki' },
-  { title: 'Šamanské léčení (1 500 Kč)', value: 'shamanic' },
-  { title: '3 sezení Reiki (3 200 Kč)', value: 'reiki-package' },
-  { title: '3 sezení Šamanské léčení (4 200 Kč)', value: 'shamanic-package' },
-  { title: 'Kombinovaný balíček (5 500 Kč)', value: 'combined-package' }
-]
+// Services list
+const services = ref([
+  'Reiki léčení (1 200 Kč)',
+  'Šamanské léčení (1 500 Kč)',
+  'Energetické čištění (800 Kč)',
+  'Kombinované sezení'
+])
 
-const availableDates = [
-  'Pondělí 9:00 - 18:00',
-  'Úterý 9:00 - 18:00',
-  'Středa 9:00 - 18:00',
-  'Čtvrtek 9:00 - 18:00',
-  'Pátek 9:00 - 18:00',
-  'Sobota 9:00 - 14:00'
-]
+// Time slots
+const timeSlots = ref([
+  '9:00',
+  '10:30',
+  '12:00',
+  '13:30',
+  '15:00',
+  '16:30'
+])
 
-// Form validation rules
-const rules = {
-  required: v => !!v || 'Toto pole je povinné',
-  email: v => /.+@.+\..+/.test(v) || 'Zadejte platný email'
-}
+// Minimum date (today)
+const minDate = computed(() => {
+  const today = new Date()
+  return today.toISOString().substr(0, 10)
+})
 
-// Submit form
+// Form submission
 const submitBooking = async () => {
-  isSubmitting.value = true
+  loading.value = true
   
   // Simulate form submission
   await new Promise(resolve => setTimeout(resolve, 2000))
   
-  isSubmitting.value = false
-  showSuccessDialog.value = true
-  
   // Reset form
   bookingForm.value = {
-    firstName: '',
-    lastName: '',
+    name: '',
     email: '',
     phone: '',
-    serviceType: '',
-    preferredDate: '',
-    notes: ''
+    service: '',
+    date: '',
+    time: '',
+    message: ''
   }
+  
+  loading.value = false
+  
+  // Show success message
+  alert('Děkujeme za vaši rezervaci! Ozvu se vám do 24 hodin s potvrzením termínu.')
 }
 </script>
 

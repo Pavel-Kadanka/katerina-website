@@ -1,47 +1,31 @@
 <template>
   <div>
-    <!-- Hero Section -->
-    <v-container fluid class="hero-section pa-0">
-      <v-row no-gutters class="align-center" style="min-height: 60vh;">
-        <v-col cols="12" class="text-center">
-          <div class="hero-content">
-            <v-icon size="64" color="primary" class="mb-4">mdi-email</v-icon>
-            <h1 class="text-h2 text-md-h1 font-weight-bold text-primary mb-4">
-              Kontakt
-            </h1>
-            <p class="text-h5 text-secondary max-width-600 mx-auto">
-              Kontaktujte mě a začněme společně vaši cestu k uzdravení
-            </p>
-          </div>
-        </v-col>
-      </v-row>
-    </v-container>
-
     <!-- Contact Content -->
-    <v-container class="py-16">
+    <v-container class="section-container">
       <v-row justify="center">
         <v-col cols="12" lg="10">
           <!-- Contact Information -->
-          <v-row class="mb-16">
-            <v-col cols="12" class="text-center mb-8">
-              <h2 class="text-h3 text-md-h2 font-weight-bold text-primary mb-4">
+          <v-row class="mb-16 mt-8">
+            <v-col cols="12" class="text-center">
+              <h2 class="text-h3 text-md-h2 font-weight-bold gradient-text-primary mb-4 scroll-animate">
                 Kontaktní informace
               </h2>
-              <p class="text-h6 text-secondary max-width-600 mx-auto">
+              <div class="spiritual-divider mx-auto scroll-animate" style="width: 100px;"></div>
+              <p class="text-h6 text-secondary max-width-600 mx-auto mt-4 scroll-animate">
                 Jsem tu pro vás a ráda zodpovím všechny vaše otázky
               </p>
             </v-col>
           </v-row>
 
           <v-row>
-            <v-col cols="12" md="4" class="mb-6">
+            <v-col cols="12" md="4" class="mb-8">
               <v-card
-                class="contact-card h-100 pa-6 text-center"
-                :color="$vuetify.theme.current.dark ? 'surface' : 'background'"
+                class="contact-card h-100 pa-6 text-center hover-lift spiritual-shadow"
+                color="surface"
                 elevation="3"
                 rounded="xl"
               >
-                <v-icon size="64" color="primary" class="mb-4">mdi-email</v-icon>
+                <v-icon size="64" color="accent" class="mb-4 floating-icon">mdi-email</v-icon>
                 <h3 class="text-h5 font-weight-bold text-primary mb-3">Email</h3>
                 <p class="text-body-1 text-secondary mb-3">katerina.patykova@email.cz</p>
                 <p class="text-body-2 text-secondary">
@@ -52,12 +36,12 @@
 
             <v-col cols="12" md="4" class="mb-6">
               <v-card
-                class="contact-card h-100 pa-6 text-center"
-                :color="$vuetify.theme.current.dark ? 'surface' : 'background'"
+                class="contact-card h-100 pa-6 text-center hover-lift spiritual-shadow"
+                color="surface"
                 elevation="3"
                 rounded="xl"
               >
-                <v-icon size="64" color="secondary" class="mb-4">mdi-phone</v-icon>
+                <v-icon size="64" color="accent" class="mb-4 floating-icon">mdi-phone</v-icon>
                 <h3 class="text-h5 font-weight-bold text-primary mb-3">Telefon</h3>
                 <p class="text-body-1 text-secondary mb-3">+420 123 456 789</p>
                 <p class="text-body-2 text-secondary">
@@ -68,12 +52,12 @@
 
             <v-col cols="12" md="4" class="mb-6">
               <v-card
-                class="contact-card h-100 pa-6 text-center"
-                :color="$vuetify.theme.current.dark ? 'surface' : 'background'"
+                class="contact-card h-100 pa-6 text-center hover-lift spiritual-shadow"
+                color="surface"
                 elevation="3"
                 rounded="xl"
               >
-                <v-icon size="64" color="cta" class="mb-4">mdi-map-marker</v-icon>
+                <v-icon size="64" color="accent" class="mb-4 floating-icon">mdi-map-marker</v-icon>
                 <h3 class="text-h5 font-weight-bold text-primary mb-3">Adresa</h3>
                 <p class="text-body-1 text-secondary mb-3">Brno – centrum</p>
                 <p class="text-body-2 text-secondary">
@@ -85,9 +69,9 @@
 
           <!-- Opening Hours -->
           <v-row class="mb-16">
-            <v-col cols="12" md="6" class="d-flex align-center">
+            <v-col cols="12" md="6" class="d-flex align-center scroll-animate-left">
               <div>
-                <h2 class="text-h3 text-md-h2 font-weight-bold text-primary mb-6">
+                <h2 class="text-h3 text-md-h2 font-weight-bold text-accent mb-6">
                   Otevírací doba
                 </h2>
                 <div class="d-flex flex-column gap-4">
@@ -101,250 +85,191 @@
                   </div>
                   <div class="d-flex justify-space-between align-center">
                     <span class="text-body-1 text-secondary">Neděle</span>
-                    <span class="text-body-1 font-weight-bold text-secondary">zavřeno</span>
+                    <span class="text-body-1 font-weight-bold text-primary">Zavřeno</span>
                   </div>
                 </div>
-                <v-divider class="my-6"></v-divider>
-                <p class="text-body-2 text-secondary">
-                  První sezení doporučuji rezervovat s dostatečným časovým předstihem. 
-                  Přijďte prosím 10 minut před začátkem sezení.
+                <p class="text-body-2 text-secondary mt-6">
+                  * Individuální termíny jsou možné po předchozí domluvě
                 </p>
               </div>
             </v-col>
-            <v-col cols="12" md="6" class="d-flex justify-center">
+            <v-col cols="12" md="6" class="d-flex justify-center scroll-animate-right">
               <v-card
-                class="location-card pa-8"
-                :color="$vuetify.theme.current.dark ? 'surface' : 'accent'"
-                elevation="2"
+                class="hours-card pa-8 hover-lift spiritual-shadow"
+                color="surface"
+                elevation="3"
                 rounded="xl"
                 max-width="400"
               >
                 <div class="text-center">
-                  <v-icon size="80" color="primary" class="mb-4">mdi-map</v-icon>
-                  <h3 class="text-h5 font-weight-bold text-primary mb-3">Jak se dostat</h3>
-                  <p class="text-body-2 text-secondary mb-4">
-                    Nacházím se v centru Brna, snadno dostupné MHD i autem. 
-                    Přesnou adresu a instrukce k cestě obdržíte po rezervaci sezení.
-                  </p>
-                  <div class="d-flex flex-column gap-2">
-                    <div class="d-flex align-center">
-                      <v-icon size="20" color="secondary" class="mr-2">mdi-bus</v-icon>
-                      <span class="text-body-2 text-secondary">MHD - zastávka 5 min chůze</span>
-                    </div>
-                    <div class="d-flex align-center">
-                      <v-icon size="20" color="secondary" class="mr-2">mdi-car</v-icon>
-                      <span class="text-body-2 text-secondary">Parkování v okolí</span>
-                    </div>
-                    <div class="d-flex align-center">
-                      <v-icon size="20" color="secondary" class="mr-2">mdi-walk</v-icon>
-                      <span class="text-body-2 text-secondary">Centrum - 10 min chůze</span>
-                    </div>
-                  </div>
+                  <v-icon size="64" color="accent" class="mb-4 floating-icon">mdi-clock</v-icon>
+                  <h3 class="text-h5 font-weight-bold text-primary mb-4">Důležité informace</h3>
+                  <ul class="text-body-2 text-secondary text-left">
+                    <li class="mb-3">Sezení je nutné objednat předem</li>
+                    <li class="mb-3">Zrušení sezení je možné do 24h předem</li>
+                    <li class="mb-3">Platba probíhá na místě v hotovosti</li>
+                    <li class="mb-3">Parkování je možné v okolí</li>
+                    <li class="mb-3">Bezbariérový přístup</li>
+                  </ul>
                 </div>
               </v-card>
             </v-col>
           </v-row>
 
           <!-- Contact Form -->
-          <v-row class="mb-16">
-            <v-col cols="12" class="text-center mb-8">
-              <h2 class="text-h3 text-md-h2 font-weight-bold text-primary mb-4">
-                Kontaktní formulář
+          <v-row class="mb-8">
+            <v-col cols="12" class="text-center">
+              <h2 class="text-h3 text-md-h2 font-weight-bold gradient-text-primary mb-4 scroll-animate">
+                Napište mi
               </h2>
-              <p class="text-h6 text-secondary max-width-600 mx-auto">
-                Máte otázky? Napište mi a já se vám ozvu co nejdříve
+              <div class="spiritual-divider mx-auto scroll-animate" style="width: 100px;"></div>
+              <p class="text-h6 text-secondary max-width-600 mx-auto mt-4 scroll-animate">
+                Máte otázky nebo chcete objednat sezení? Napište mi zprávu
               </p>
             </v-col>
           </v-row>
 
-          <v-row justify="center">
-            <v-col cols="12" md="8">
+          <v-row class="mb-8" justify="center">
+            <v-col cols="12" md="8" class="scroll-animate-scale">
               <v-card
                 class="contact-form-card pa-8"
-                :color="$vuetify.theme.current.dark ? 'surface' : 'background'"
-                elevation="3"
+                color="surface"
+                elevation="4"
                 rounded="xl"
               >
-                <v-form @submit.prevent="submitContact">
+                <v-form @submit.prevent="submitForm">
                   <v-row>
                     <v-col cols="12" md="6">
                       <v-text-field
-                        v-model="contactForm.name"
-                        label="Jméno *"
+                        v-model="form.name"
+                        label="Vaše jméno *"
                         variant="outlined"
                         color="primary"
                         required
-                        :rules="[rules.required]"
+                        class="mb-4"
                       ></v-text-field>
                     </v-col>
                     <v-col cols="12" md="6">
                       <v-text-field
-                        v-model="contactForm.email"
+                        v-model="form.email"
                         label="Email *"
                         variant="outlined"
                         color="primary"
                         type="email"
                         required
-                        :rules="[rules.required, rules.email]"
+                        class="mb-4"
                       ></v-text-field>
                     </v-col>
                   </v-row>
 
-                  <v-row>
-                    <v-col cols="12">
-                      <v-text-field
-                        v-model="contactForm.subject"
-                        label="Předmět *"
-                        variant="outlined"
-                        color="primary"
-                        required
-                        :rules="[rules.required]"
-                      ></v-text-field>
-                    </v-col>
-                  </v-row>
+                  <v-text-field
+                    v-model="form.phone"
+                    label="Telefon"
+                    variant="outlined"
+                    color="primary"
+                    class="mb-4"
+                  ></v-text-field>
 
-                  <v-row>
-                    <v-col cols="12">
-                      <v-textarea
-                        v-model="contactForm.message"
-                        label="Zpráva *"
-                        variant="outlined"
-                        color="primary"
-                        rows="6"
-                        required
-                        :rules="[rules.required]"
-                        placeholder="Napište mi vaši zprávu..."
-                      ></v-textarea>
-                    </v-col>
-                  </v-row>
+                  <v-select
+                    v-model="form.service"
+                    label="Zájem o službu"
+                    variant="outlined"
+                    color="primary"
+                    :items="services"
+                    class="mb-4"
+                  ></v-select>
 
-                  <v-row>
-                    <v-col cols="12" class="text-center">
-                      <v-btn
-                        type="submit"
-                        size="x-large"
-                        color="cta"
-                        variant="elevated"
-                        class="text-body-1 font-weight-medium"
-                        rounded="pill"
-                        :loading="isSubmitting"
-                        :disabled="isSubmitting"
-                      >
-                        <v-icon start>mdi-send</v-icon>
-                        Odeslat zprávu
-                      </v-btn>
-                    </v-col>
-                  </v-row>
+                  <v-textarea
+                    v-model="form.message"
+                    label="Vaše zpráva *"
+                    variant="outlined"
+                    color="primary"
+                    rows="6"
+                    required
+                    class="mb-6"
+                  ></v-textarea>
+
+                  <div class="d-flex justify-center">
+                    <v-btn
+                      type="submit"
+                      color="accent"
+                      size="large"
+                      class="animated-gradient-btn"
+                      rounded="xl"
+                      :loading="loading"
+                    >
+                      <v-icon start>mdi-send</v-icon>
+                      Odeslat zprávu
+                    </v-btn>
+                  </div>
                 </v-form>
               </v-card>
             </v-col>
           </v-row>
 
           <!-- FAQ Section -->
-          <v-row class="mt-16">
-            <v-col cols="12" class="text-center mb-8">
-              <h2 class="text-h3 text-md-h2 font-weight-bold text-primary mb-4">
+          <v-row>
+            <v-col cols="12" class="text-center">
+              <h2 class="text-h3 text-md-h2 font-weight-bold gradient-text-primary mb-4 scroll-animate">
                 Často kladené otázky
               </h2>
-              <p class="text-h6 text-secondary max-width-600 mx-auto">
-                Odpovědi na nejčastější otázky
-              </p>
+              <div class="spiritual-divider mx-auto scroll-animate" style="width: 100px;"></div>
             </v-col>
           </v-row>
 
-          <v-row>
-            <v-col cols="12" md="6" class="mb-6">
-              <v-card
-                class="faq-card pa-6"
-                :color="$vuetify.theme.current.dark ? 'surface' : 'background'"
-                elevation="2"
-                rounded="xl"
-              >
-                <h3 class="text-h6 font-weight-bold text-primary mb-3">
-                  Jak dlouho trvá sezení?
-                </h3>
-                <p class="text-body-2 text-secondary">
-                  Reiki sezení trvá 60-90 minut, šamanské léčení 90-120 minut. 
-                  Celkový čas zahrnuje úvodní konzultaci, samotnou terapii a závěrečnou část.
-                </p>
-              </v-card>
-            </v-col>
-
-            <v-col cols="12" md="6" class="mb-6">
-              <v-card
-                class="faq-card pa-6"
-                :color="$vuetify.theme.current.dark ? 'surface' : 'background'"
-                elevation="2"
-                rounded="xl"
-              >
-                <h3 class="text-h6 font-weight-bold text-primary mb-3">
-                  Co si mám vzít s sebou?
-                </h3>
-                <p class="text-body-2 text-secondary">
-                  Stačí pohodlné oblečení. Vše ostatní je zajištěno. 
-                  Doporučuji přijít s dostatečným časovým předstihem.
-                </p>
-              </v-card>
-            </v-col>
-
-            <v-col cols="12" md="6" class="mb-6">
-              <v-card
-                class="faq-card pa-6"
-                :color="$vuetify.theme.current.dark ? 'surface' : 'background'"
-                elevation="2"
-                rounded="xl"
-              >
-                <h3 class="text-h6 font-weight-bold text-primary mb-3">
-                  Je možné platit kartou?
-                </h3>
-                <p class="text-body-2 text-secondary">
-                  Ano, přijímám platby hotovostí, kartou i bankovním převodem. 
-                  Fakturu vystavuji na požádání.
-                </p>
-              </v-card>
-            </v-col>
-
-            <v-col cols="12" md="6" class="mb-6">
-              <v-card
-                class="faq-card pa-6"
-                :color="$vuetify.theme.current.dark ? 'surface' : 'background'"
-                elevation="2"
-                rounded="xl"
-              >
-                <h3 class="text-h6 font-weight-bold text-primary mb-3">
-                  Jak často chodit na sezení?
-                </h3>
-                <p class="text-body-2 text-secondary">
-                  Frekvence závisí na vašich potřebách. Pro akutní problémy doporučuji 
-                  1-2 sezení týdně, pro udržovací péči 1x měsíčně.
-                </p>
-              </v-card>
+          <v-row justify="center">
+            <v-col cols="12" lg="8" class="scroll-animate">
+              <v-expansion-panels variant="accordion">
+                <v-expansion-panel
+                  v-for="(faq, index) in faqs"
+                  :key="index"
+                  class="mb-4"
+                >
+                  <v-expansion-panel-title class="text-h6 font-weight-bold text-primary">
+                    {{ faq.question }}
+                  </v-expansion-panel-title>
+                  <v-expansion-panel-text class="text-body-1 text-secondary">
+                    {{ faq.answer }}
+                  </v-expansion-panel-text>
+                </v-expansion-panel>
+              </v-expansion-panels>
             </v-col>
           </v-row>
         </v-col>
       </v-row>
     </v-container>
 
-    <!-- Success Dialog -->
-    <v-dialog v-model="showSuccessDialog" max-width="500">
-      <v-card class="pa-6" rounded="xl">
-        <div class="text-center">
-          <v-icon size="64" color="success" class="mb-4">mdi-check-circle</v-icon>
-          <h3 class="text-h5 font-weight-bold text-primary mb-3">Zpráva odeslána!</h3>
-          <p class="text-body-1 text-secondary mb-6">
-            Děkujeme za vaši zprávu. Ozvu se vám do 24 hodin.
-          </p>
-          <v-btn
-            color="primary"
-            variant="elevated"
-            @click="showSuccessDialog = false"
-            rounded="pill"
+    <!-- Call to Action -->
+    <v-container class="section-container soft-gradient-primary">
+      <v-row justify="center">
+        <v-col cols="12" md="8" class="text-center scroll-animate-scale">
+          <v-card
+            class="cta-card pa-8"
+            color="surface"
+            elevation="4"
+            rounded="xl"
           >
-            Zavřít
-          </v-btn>
-        </div>
-      </v-card>
-    </v-dialog>
+            <h2 class="text-h3 text-md-h2 font-weight-bold gradient-text-primary mb-4">
+              Začněte svou cestu k uzdravení
+            </h2>
+            <p class="text-h6 text-secondary mb-8">
+              Objednejte si své první sezení a objevte sílu energetického léčení
+            </p>
+            <v-btn
+              to="/objednani"
+              size="x-large"
+              color="accent"
+              variant="elevated"
+              class="text-body-1 font-weight-medium animated-gradient-btn"
+              rounded="xl"
+            >
+              <v-icon start>mdi-calendar-check</v-icon>
+              Objednat sezení
+            </v-btn>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
@@ -353,46 +278,78 @@ import { ref } from 'vue'
 
 // Page metadata
 useHead({
-  title: 'Kontakt - Kateřina Patyková',
+  title: 'Kontakt - Reiki & Šamanské léčení | Kateřina Patyková',
   meta: [
-    { name: 'description', content: 'Kontaktujte Kateřinu Patykovou pro Reiki a šamanské léčení. Kontaktní informace, formulář a adresa v Brně.' }
+    { name: 'description', content: 'Kontaktujte mě pro Reiki a šamanské léčení. Email, telefon, adresa a kontaktní formulář. Jsem tu pro vás.' }
   ]
 })
 
+// GSAP animations are handled globally in app.vue
+
 // Form data
-const contactForm = ref({
+const form = ref({
   name: '',
   email: '',
-  subject: '',
+  phone: '',
+  service: '',
   message: ''
 })
 
-const isSubmitting = ref(false)
-const showSuccessDialog = ref(false)
+const loading = ref(false)
 
-// Form validation rules
-const rules = {
-  required: v => !!v || 'Toto pole je povinné',
-  email: v => /.+@.+\..+/.test(v) || 'Zadejte platný email'
-}
+// Services list
+const services = ref([
+  'Reiki léčení',
+  'Šamanské léčení',
+  'Energetické čištění',
+  'Kombinované sezení',
+  'Jiné'
+])
 
-// Submit form
-const submitContact = async () => {
-  isSubmitting.value = true
+// FAQ data
+const faqs = ref([
+  {
+    question: 'Jak se objednat na sezení?',
+    answer: 'Můžete se objednat telefonicky, emailem nebo přes kontaktní formulář na této stránce. Ráda vám pomohu najít vhodný termín.'
+  },
+  {
+    question: 'Jak dlouho trvá odpověď na email?',
+    answer: 'Odpovídám obvykle do 24 hodin, často mnohem dříve. V pracovní dny obvykle do několika hodin.'
+  },
+  {
+    question: 'Je možné sezení v jiných časech?',
+    answer: 'Ano, individuální termíny jsou možné po předchozí domluvě. Ráda se přizpůsobím vašim potřebám.'
+  },
+  {
+    question: 'Co mám přinést na sezení?',
+    answer: 'Stačí pohodlné oblečení a otevřenou mysl. Vše ostatní je zajištěno. Doporučuji přijít 10 minut před začátkem.'
+  },
+  {
+    question: 'Je možné sezení online?',
+    answer: 'Některé formy energetického léčení je možné provádět i na dálku. Kontaktujte mě pro více informací.'
+  }
+])
+
+// Form submission
+const submitForm = async () => {
+  loading.value = true
   
   // Simulate form submission
   await new Promise(resolve => setTimeout(resolve, 2000))
   
-  isSubmitting.value = false
-  showSuccessDialog.value = true
-  
   // Reset form
-  contactForm.value = {
+  form.value = {
     name: '',
     email: '',
-    subject: '',
+    phone: '',
+    service: '',
     message: ''
   }
+  
+  loading.value = false
+  
+  // Show success message (you can implement this with a toast or alert)
+  alert('Děkujeme za vaši zprávu! Odpovím vám co nejdříve.')
 }
 </script>
 

@@ -1,33 +1,29 @@
 <template>
   <div>
-    <!-- Hero Section -->
-    <v-container fluid class="hero-section pa-0 hero-gradient-bg">
-      <v-row no-gutters class="align-center" style="min-height: 60vh;">
-        <v-col cols="12" class="text-center">
-          <div class="hero-content">
-            <v-icon size="64" color="white" class="mb-4 floating-icon">mdi-heart-pulse</v-icon>
-            <h1 class="text-h2 text-md-h1 font-weight-bold text-white mb-4">
-              Služby
-            </h1>
-            <p class="text-h5 text-white max-width-600 mx-auto">
-              Reiki & Šamanské léčení pro vaši vnitřní rovnováhu
-            </p>
-          </div>
-        </v-col>
-      </v-row>
-    </v-container>
-
     <!-- Main Services -->
-    <v-container class="py-16">
+    <v-container class="section-container">
       <v-row justify="center">
         <v-col cols="12" lg="10">
+          <!-- Header Section -->
+          <v-row class="mb-16 mt-8">
+            <v-col cols="12" class="text-center">
+              <h2 class="text-h3 text-md-h2 font-weight-bold gradient-text-primary mb-4 scroll-animate">
+                Moje služby
+              </h2>
+              <div class="spiritual-divider mx-auto scroll-animate" style="width: 100px;"></div>
+              <p class="text-h6 text-secondary max-width-600 mx-auto mt-4 scroll-animate">
+                Profesionální energetické terapie pro vaši vnitřní rovnováhu a harmonii
+              </p>
+            </v-col>
+          </v-row>
+
           <!-- Reiki Healing -->
           <v-row class="mb-16">
-            <v-col cols="12" md="6" class="d-flex align-center">
+            <v-col cols="12" md="6" class="d-flex align-center scroll-animate-left">
               <div>
                 <div class="d-flex align-center mb-4">
-                  <v-icon size="48" color="primary" class="mr-3">mdi-heart</v-icon>
-                  <h2 class="text-h3 text-md-h2 font-weight-bold text-primary">Reiki léčení</h2>
+                  <v-icon size="48" color="accent" class="mr-3">mdi-heart</v-icon>
+                  <h2 class="text-h3 text-md-h2 font-weight-bold text-accent">Reiki léčení</h2>
                 </div>
                 <h3 class="text-h5 font-weight-bold text-secondary mb-4">Harmonie těla a duše</h3>
                 <p class="text-body-1 text-secondary mb-4">
@@ -41,43 +37,44 @@
                   a podpořit celkové uzdravení.
                 </p>
                 <div class="d-flex align-center mb-4">
-                  <v-icon color="cta" class="mr-2">mdi-clock</v-icon>
+                  <v-icon color="accent" class="mr-2">mdi-clock</v-icon>
                   <span class="text-body-1 text-secondary">Doba sezení: 60-90 minut</span>
                 </div>
                 <div class="d-flex align-center mb-6">
-                  <v-icon color="cta" class="mr-2">mdi-currency-czk</v-icon>
-                  <span class="text-h5 font-weight-bold text-cta">1 200 Kč / sezení</span>
+                  <v-icon color="accent" class="mr-2">mdi-currency-czk</v-icon>
+                  <span class="text-h5 font-weight-bold text-accent">1 200 Kč / sezení</span>
                 </div>
                 <v-btn
                   to="/objednani"
-                  color="cta"
+                  color="accent"
                   variant="elevated"
                   size="large"
-                  rounded="pill"
-                  class="text-body-1 font-weight-medium"
+                  rounded="xl"
+                  class="text-body-1 font-weight-medium animated-gradient-btn"
                 >
                   <v-icon start>mdi-calendar-check</v-icon>
                   Objednat Reiki sezení
                 </v-btn>
               </div>
             </v-col>
-            <v-col cols="12" md="6" class="d-flex justify-center">
+            <v-col cols="12" md="6" class="d-flex justify-center scroll-animate-right">
               <v-card
-                class="service-image-card pa-8 animated-gradient-card"
+                class="service-image-card pa-8 hover-lift spiritual-shadow"
+                color="surface"
                 elevation="2"
                 rounded="xl"
                 max-width="400"
               >
                 <div class="text-center">
-                  <v-icon size="80" color="primary" class="mb-4 floating-icon">mdi-heart-pulse</v-icon>
+                  <v-icon size="80" color="accent" class="mb-4 floating-icon">mdi-heart-pulse</v-icon>
                   <h3 class="text-h5 font-weight-bold text-primary mb-3">Co Reiki léčí?</h3>
                   <ul class="text-body-2 text-secondary text-left">
-                    <li class="mb-2">• Stres a úzkost</li>
-                    <li class="mb-2">• Chronickou bolest</li>
-                    <li class="mb-2">• Poruchy spánku</li>
-                    <li class="mb-2">• Emoční bloky</li>
-                    <li class="mb-2">• Energetické nerovnováhy</li>
-                    <li class="mb-2">• Celkové uvolnění</li>
+                    <li class="mb-2">Stres a úzkost</li>
+                    <li class="mb-2">Chronickou bolest</li>
+                    <li class="mb-2">Poruchy spánku</li>
+                    <li class="mb-2">Emoční bloky</li>
+                    <li class="mb-2">Energetické nerovnováhy</li>
+                    <li class="mb-2">Celkové uvolnění</li>
                   </ul>
                 </div>
               </v-card>
@@ -86,59 +83,60 @@
 
           <!-- Shamanic Healing -->
           <v-row class="mb-16">
-            <v-col cols="12" md="6" class="d-flex justify-center order-md-2">
+            <v-col cols="12" md="6" class="d-flex justify-center order-md-2 scroll-animate-right">
               <v-card
-                class="service-image-card pa-8 animated-gradient-card"
+                class="service-image-card pa-8 hover-lift spiritual-shadow"
+                color="surface"
                 elevation="2"
                 rounded="xl"
                 max-width="400"
               >
                 <div class="text-center">
-                  <v-icon size="80" color="secondary" class="mb-4 floating-icon">mdi-star</v-icon>
+                  <v-icon size="80" color="accent" class="mb-4 floating-icon">mdi-star</v-icon>
                   <h3 class="text-h5 font-weight-bold text-primary mb-3">Co šamanské léčení řeší?</h3>
                   <ul class="text-body-2 text-secondary text-left">
-                    <li class="mb-2">• Hluboká traumata</li>
-                    <li class="mb-2">• Emoční bloky</li>
-                    <li class="mb-2">• Duchovní krize</li>
-                    <li class="mb-2">• Ztrátu smyslu života</li>
-                    <li class="mb-2">• Vztahové problémy</li>
-                    <li class="mb-2">• Spojení s duší</li>
+                    <li class="mb-2">Hluboká traumata</li>
+                    <li class="mb-2">Emoční bloky</li>
+                    <li class="mb-2">Duchovní krize</li>
+                    <li class="mb-2">Vztahové problémy</li>
+                    <li class="mb-2">Ztráta smyslu života</li>
+                    <li class="mb-2">Očista energetického pole</li>
                   </ul>
                 </div>
               </v-card>
             </v-col>
-            <v-col cols="12" md="6" class="d-flex align-center order-md-1">
+            <v-col cols="12" md="6" class="d-flex align-center order-md-1 scroll-animate-left">
               <div>
                 <div class="d-flex align-center mb-4">
-                  <v-icon size="48" color="secondary" class="mr-3">mdi-star</v-icon>
-                  <h2 class="text-h3 text-md-h2 font-weight-bold text-primary">Šamanské léčení</h2>
+                  <v-icon size="48" color="accent" class="mr-3">mdi-star</v-icon>
+                  <h2 class="text-h3 text-md-h2 font-weight-bold text-accent">Šamanské léčení</h2>
                 </div>
                 <h3 class="text-h5 font-weight-bold text-secondary mb-4">Hluboké uzdravení duše</h3>
                 <p class="text-body-1 text-secondary mb-4">
-                  Šamanské léčení pracuje s hlubšími vrstvami našeho bytí a pomáhá řešit emoční bloky, 
-                  traumata a duchovní otázky. Je to starodávná metoda, která využívá sílu přírody, 
-                  rituálů a duchovního světa k uzdravení.
+                  Šamanské léčení je starodávná metoda, která pracuje s hlubšími vrstvami našeho bytí. 
+                  Pomáhá řešit emoční bloky, traumata a duchovní otázky, které mohou bránit našemu 
+                  osobnímu růstu a štěstí.
                 </p>
                 <p class="text-body-1 text-secondary mb-4">
-                  Každé sezení je jedinečné a přizpůsobené potřebám klienta. Může zahrnovat práci s 
-                  bubnem, rituály, vizualizace a hluboké rozhovory. Šamanské léčení pomáhá najít 
-                  ztracené části duše a obnovit spojení s vlastní vnitřní moudrostí.
+                  Během šamanského sezení používám různé techniky jako bubnování, zpěv, pohyb a 
+                  vizualizace. Společně procházíme procesem očisty a uzdravení, který vám pomůže 
+                  najít vnitřní klid a sílu.
                 </p>
                 <div class="d-flex align-center mb-4">
-                  <v-icon color="cta" class="mr-2">mdi-clock</v-icon>
+                  <v-icon color="accent" class="mr-2">mdi-clock</v-icon>
                   <span class="text-body-1 text-secondary">Doba sezení: 90-120 minut</span>
                 </div>
                 <div class="d-flex align-center mb-6">
-                  <v-icon color="cta" class="mr-2">mdi-currency-czk</v-icon>
-                  <span class="text-h5 font-weight-bold text-cta">1 500 Kč / sezení</span>
+                  <v-icon color="accent" class="mr-2">mdi-currency-czk</v-icon>
+                  <span class="text-h5 font-weight-bold text-accent">1 500 Kč / sezení</span>
                 </div>
                 <v-btn
                   to="/objednani"
-                  color="cta"
+                  color="accent"
                   variant="elevated"
                   size="large"
-                  rounded="pill"
-                  class="text-body-1 font-weight-medium"
+                  rounded="xl"
+                  class="text-body-1 font-weight-medium animated-gradient-btn"
                 >
                   <v-icon start>mdi-calendar-check</v-icon>
                   Objednat šamanské sezení
@@ -147,168 +145,66 @@
             </v-col>
           </v-row>
 
-          <!-- Session Structure -->
+          <!-- Energy Cleansing -->
           <v-row class="mb-16">
-            <v-col cols="12" class="text-center">
-              <h2 class="text-h3 text-md-h2 font-weight-bold text-primary mb-8">
-                Průběh sezení
-              </h2>
-            </v-col>
-          </v-row>
-          
-          <v-row>
-            <v-col cols="12" md="4" class="mb-6">
-              <v-card
-                class="session-step-card h-100 pa-6 text-center"
-                :color="$vuetify.theme.current.dark ? 'surface' : 'background'"
-                elevation="2"
-                rounded="xl"
-              >
-                <div class="step-number mb-4">1</div>
-                <v-icon size="48" color="primary" class="mb-4">mdi-chat</v-icon>
-                <h3 class="text-h5 font-weight-bold text-primary mb-3">Úvodní konzultace</h3>
-                <p class="text-subtitle-1 text-cta font-weight-bold mb-2">15 minut</p>
-                <p class="text-body-2 text-secondary">
-                  Povídáme si o vašich potřebách, problémech a očekáváních. 
-                  Vysvětlím vám průběh sezení a odpovím na vaše otázky.
-                </p>
-              </v-card>
-            </v-col>
-            
-            <v-col cols="12" md="4" class="mb-6">
-              <v-card
-                class="session-step-card h-100 pa-6 text-center"
-                :color="$vuetify.theme.current.dark ? 'surface' : 'background'"
-                elevation="2"
-                rounded="xl"
-              >
-                <div class="step-number mb-4">2</div>
-                <v-icon size="48" color="secondary" class="mb-4">mdi-heart-pulse</v-icon>
-                <h3 class="text-h5 font-weight-bold text-primary mb-3">Energetické ošetření</h3>
-                <p class="text-subtitle-1 text-cta font-weight-bold mb-2">45-60 minut</p>
-                <p class="text-body-2 text-secondary">
-                  Samotná terapie, během které pracuji s vaší energií a pomáhám 
-                  uvolnit bloky a obnovit přirozenou rovnováhu.
-                </p>
-              </v-card>
-            </v-col>
-            
-            <v-col cols="12" md="4" class="mb-6">
-              <v-card
-                class="session-step-card h-100 pa-6 text-center"
-                :color="$vuetify.theme.current.dark ? 'surface' : 'background'"
-                elevation="2"
-                rounded="xl"
-              >
-                <div class="step-number mb-4">3</div>
-                <v-icon size="48" color="cta" class="mb-4">mdi-lightbulb</v-icon>
-                <h3 class="text-h5 font-weight-bold text-primary mb-3">Závěrečná část</h3>
-                <p class="text-subtitle-1 text-cta font-weight-bold mb-2">15 minut</p>
-                <p class="text-body-2 text-secondary">
-                  Sdílíme pocity ze sezení, dám vám doporučení pro domácí péči 
-                  a odpovím na případné otázky.
-                </p>
-              </v-card>
-            </v-col>
-          </v-row>
-
-          <!-- Packages and Discounts -->
-          <v-row class="mt-16">
-            <v-col cols="12" class="text-center mb-8">
-              <h2 class="text-h3 text-md-h2 font-weight-bold text-primary mb-4">
-                Balíčky a slevy
-              </h2>
-              <p class="text-h6 text-secondary max-width-600 mx-auto">
-                Ušetřete při objednání více sezení najednou
-              </p>
-            </v-col>
-          </v-row>
-          
-          <v-row>
-            <v-col cols="12" md="4" class="mb-6">
-              <v-card
-                class="package-card h-100 pa-6 text-center"
-                :color="$vuetify.theme.current.dark ? 'surface' : 'background'"
-                elevation="3"
-                rounded="xl"
-              >
-                <v-icon size="64" color="primary" class="mb-4">mdi-heart</v-icon>
-                <h3 class="text-h5 font-weight-bold text-primary mb-3">3 sezení Reiki</h3>
-                <div class="price-section mb-4">
-                  <span class="text-h4 font-weight-bold text-cta">3 200 Kč</span>
-                  <div class="text-body-2 text-secondary">ušetříte 400 Kč</div>
+            <v-col cols="12" md="6" class="d-flex align-center scroll-animate-left">
+              <div>
+                <div class="d-flex align-center mb-4">
+                  <v-icon size="48" color="accent" class="mr-3">mdi-star-four-points</v-icon>
+                  <h2 class="text-h3 text-md-h2 font-weight-bold text-accent">Energetické čištění</h2>
                 </div>
-                <p class="text-body-2 text-secondary mb-4">
-                  Ideální pro začátečníky nebo pro řešení akutních problémů
+                <h3 class="text-h5 font-weight-bold text-secondary mb-4">Očista a harmonizace</h3>
+                <p class="text-body-1 text-secondary mb-4">
+                  Energetické čištění je specializovaná služba zaměřená na odstranění negativních energií 
+                  a blokád z vašeho energetického pole. Tato metoda je ideální pro lidi, kteří se cítí 
+                  energeticky vyčerpaní nebo mají pocit, že je něco "drží zpět".
                 </p>
+                <p class="text-body-1 text-secondary mb-4">
+                  Během sezení pracuji s vaším aurickým polem a čakrami, odstraňuji negativní energie 
+                  a obnovuji přirozený tok životní energie. Po sezení se budete cítit lehčí, svěžejší 
+                  a energeticky vyrovnaní.
+                </p>
+                <div class="d-flex align-center mb-4">
+                  <v-icon color="accent" class="mr-2">mdi-clock</v-icon>
+                  <span class="text-body-1 text-secondary">Doba sezení: 45-60 minut</span>
+                </div>
+                <div class="d-flex align-center mb-6">
+                  <v-icon color="accent" class="mr-2">mdi-currency-czk</v-icon>
+                  <span class="text-h5 font-weight-bold text-accent">800 Kč / sezení</span>
+                </div>
                 <v-btn
                   to="/objednani"
-                  color="primary"
-                  variant="outlined"
+                  color="accent"
+                  variant="elevated"
                   size="large"
-                  rounded="pill"
-                  class="text-body-1 font-weight-medium"
+                  rounded="xl"
+                  class="text-body-1 font-weight-medium animated-gradient-btn"
                 >
-                  Objednat balíček
+                  <v-icon start>mdi-calendar-check</v-icon>
+                  Objednat energetické čištění
                 </v-btn>
-              </v-card>
+              </div>
             </v-col>
-            
-            <v-col cols="12" md="4" class="mb-6">
+            <v-col cols="12" md="6" class="d-flex justify-center scroll-animate-right">
               <v-card
-                class="package-card h-100 pa-6 text-center"
-                :color="$vuetify.theme.current.dark ? 'surface' : 'background'"
-                elevation="3"
+                class="service-image-card pa-8 hover-lift spiritual-shadow"
+                color="surface"
+                elevation="2"
                 rounded="xl"
+                max-width="400"
               >
-                <v-icon size="64" color="secondary" class="mb-4">mdi-star</v-icon>
-                <h3 class="text-h5 font-weight-bold text-primary mb-3">3 sezení Šamanské léčení</h3>
-                <div class="price-section mb-4">
-                  <span class="text-h4 font-weight-bold text-cta">4 200 Kč</span>
-                  <div class="text-body-2 text-secondary">ušetříte 300 Kč</div>
+                <div class="text-center">
+                  <v-icon size="80" color="accent" class="mb-4 floating-icon">mdi-star-four-points</v-icon>
+                  <h3 class="text-h5 font-weight-bold text-primary mb-3">Výhody energetického čištění</h3>
+                  <ul class="text-body-2 text-secondary text-left">
+                    <li class="mb-2">Odstranění negativních energií</li>
+                    <li class="mb-2">Harmonizace čaker</li>
+                    <li class="mb-2">Zvýšení energie</li>
+                    <li class="mb-2">Lepší spánek</li>
+                    <li class="mb-2">Emoční stabilita</li>
+                    <li class="mb-2">Celkové uvolnění</li>
+                  </ul>
                 </div>
-                <p class="text-body-2 text-secondary mb-4">
-                  Pro hlubší práci s duší a řešení komplexních problémů
-                </p>
-                <v-btn
-                  to="/objednani"
-                  color="secondary"
-                  variant="outlined"
-                  size="large"
-                  rounded="pill"
-                  class="text-body-1 font-weight-medium"
-                >
-                  Objednat balíček
-                </v-btn>
-              </v-card>
-            </v-col>
-            
-            <v-col cols="12" md="4" class="mb-6">
-              <v-card
-                class="package-card h-100 pa-6 text-center"
-                :color="$vuetify.theme.current.dark ? 'surface' : 'background'"
-                elevation="3"
-                rounded="xl"
-              >
-                <v-icon size="64" color="cta" class="mb-4">mdi-mix</v-icon>
-                <h3 class="text-h5 font-weight-bold text-primary mb-3">Kombinovaný balíček</h3>
-                <div class="price-section mb-4">
-                  <span class="text-h4 font-weight-bold text-cta">5 500 Kč</span>
-                  <div class="text-body-2 text-secondary">5 sezení dle výběru</div>
-                </div>
-                <p class="text-body-2 text-secondary mb-4">
-                  Kombinujte Reiki a šamanské léčení podle vašich potřeb
-                </p>
-                <v-btn
-                  to="/objednani"
-                  color="cta"
-                  variant="outlined"
-                  size="large"
-                  rounded="pill"
-                  class="text-body-1 font-weight-medium"
-                >
-                  Objednat balíček
-                </v-btn>
               </v-card>
             </v-col>
           </v-row>
@@ -316,29 +212,173 @@
       </v-row>
     </v-container>
 
-    <!-- Call to Action -->
-    <v-container fluid class="cta-section py-16">
+    <!-- Pricing Section -->
+    <v-container class="section-container mb-16">
+      <v-row>
+        <v-col cols="12" class="text-center mb-8">
+          <h2 class="text-h3 text-md-h2 font-weight-bold gradient-text-primary mb-4 scroll-animate">
+            Ceník služeb
+          </h2>
+          <div class="spiritual-divider mx-auto scroll-animate" style="width: 100px;"></div>
+          <p class="text-h6 text-secondary max-width-600 mx-auto mt-4 scroll-animate">
+            Transparentní ceny za všechny mé služby
+          </p>
+        </v-col>
+      </v-row>
+
       <v-row justify="center">
-        <v-col cols="12" md="8" class="text-center">
+        <v-col cols="12" md="4" class="mb-6">
           <v-card
-            class="cta-card pa-8"
-            color="primary"
+            class="pricing-card h-100 pa-6 hover-lift"
+            color="surface"
+            elevation="3"
+            rounded="xl"
+          >
+            <div class="text-center mb-6">
+              <v-icon size="64" color="accent" class="mb-4 floating-icon">mdi-heart</v-icon>
+              <h3 class="text-h4 font-weight-bold text-primary mb-2">Reiki léčení</h3>
+              <div class="text-h3 font-weight-bold text-accent mb-2">1 200 Kč</div>
+              <div class="text-body-2 text-secondary">za sezení</div>
+            </div>
+            <ul class="text-body-1 text-secondary mb-6 d-flex flex-column justify-center align-center">
+              <li class="mb-2">60-90 minut sezení</li>
+              <li class="mb-2">Kompletní energetické ošetření</li>
+              <li class="mb-2">Konzultace před a po sezení</li>
+              <li class="mb-2">Doporučení pro domácí péči</li>
+            </ul>
+            <v-btn
+              to="/objednani"
+              color="accent"
+              variant="elevated"
+              block
+              rounded="xl"
+              class="animated-gradient-btn"
+            >
+              Objednat
+            </v-btn>
+          </v-card>
+        </v-col>
+
+        <v-col cols="12" md="4" class="mb-6">
+          <v-card
+            class="pricing-card h-100 pa-6 hover-lift"
+            color="surface"
             elevation="4"
             rounded="xl"
           >
-            <h2 class="text-h3 text-md-h2 font-weight-bold text-white mb-4">
+            <div class="text-center mb-6">
+              <v-icon size="64" color="accent" class="mb-4 floating-icon">mdi-star</v-icon>
+              <h3 class="text-h4 font-weight-bold text-primary mb-2">Šamanské léčení</h3>
+              <div class="text-h3 font-weight-bold text-accent mb-2">1 500 Kč</div>
+              <div class="text-body-2 text-secondary">za sezení</div>
+            </div>
+            <ul class="text-body-1 text-secondary mb-6 d-flex flex-column justify-center align-center">
+              <li class="mb-2">90-120 minut sezení</li>
+              <li class="mb-2">Hluboké duchovní léčení</li>
+              <li class="mb-2">Práce s traumaty a bloky</li>
+              <li class="mb-2">Integrační podpora</li>
+            </ul>
+            <v-btn
+              to="/objednani"
+              color="accent"
+              variant="elevated"
+              block
+              rounded="xl"
+              class="animated-gradient-btn"
+            >
+              Objednat
+            </v-btn>
+          </v-card>
+        </v-col>
+
+        <v-col cols="12" md="4" class="mb-6">
+          <v-card
+            class="pricing-card h-100 pa-6 hover-lift spiritual-shadow"
+            color="surface"
+            elevation="3"
+            rounded="xl"
+          >
+            <div class="text-center mb-6">
+              <v-icon size="64" color="accent" class="mb-4 floating-icon">mdi-star-four-points</v-icon>
+              <h3 class="text-h4 font-weight-bold text-primary mb-2">Energetické čištění</h3>
+              <div class="text-h3 font-weight-bold text-accent mb-2">800 Kč</div>
+              <div class="text-body-2 text-secondary">za sezení</div>
+            </div>
+            <ul class="text-body-1 text-secondary mb-6 d-flex flex-column justify-center align-center">
+              <li class="mb-2">45-60 minut sezení</li>
+              <li class="mb-2">Očista aurického pole</li>
+              <li class="mb-2">Harmonizace čaker</li>
+              <li class="mb-2">Energetická ochrana</li>
+            </ul>
+            <v-btn
+              to="/objednani"
+              color="accent"
+              variant="elevated"
+              block
+              rounded="xl"
+              class="animated-gradient-btn"
+            >
+              Objednat
+            </v-btn>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+
+    <!-- FAQ Section -->
+    <v-container class="section-container mb-16">
+      <v-row>
+        <v-col cols="12" class="text-center">
+          <h2 class="text-h3 text-md-h2 font-weight-bold gradient-text-primary mb-4 scroll-animate">
+            Často kladené otázky
+          </h2>
+          <div class="spiritual-divider mx-auto scroll-animate" style="width: 100px;"></div>
+        </v-col>
+      </v-row>
+
+      <v-row justify="center">
+        <v-col cols="12" lg="8" class="scroll-animate">
+          <v-expansion-panels variant="accordion">
+            <v-expansion-panel
+              v-for="(faq, index) in faqs"
+              :key="index"
+              class="mb-4"
+            >
+              <v-expansion-panel-title class="text-h6 font-weight-bold text-primary">
+                {{ faq.question }}
+              </v-expansion-panel-title>
+              <v-expansion-panel-text class="text-body-1 text-secondary">
+                {{ faq.answer }}
+              </v-expansion-panel-text>
+            </v-expansion-panel>
+          </v-expansion-panels>
+        </v-col>
+      </v-row>
+    </v-container>
+
+    <!-- Call to Action -->
+    <v-container class="section-container soft-gradient-primary">
+      <v-row justify="center">
+        <v-col cols="12" md="8" class="text-center scroll-animate-scale">
+          <v-card
+            class="cta-card pa-8 "
+            color="surface"
+            elevation="4"
+            rounded="xl"
+          >
+            <h2 class="text-h3 text-md-h2 font-weight-bold gradient-text-primary mb-4">
               Začněte svou cestu k uzdravení
             </h2>
-            <p class="text-h6 text-white mb-8">
+            <p class="text-h6 text-secondary mb-8">
               Objednejte si své první sezení a objevte sílu energetického léčení
             </p>
             <v-btn
               to="/objednani"
               size="x-large"
-              color="cta"
+              color="accent"
               variant="elevated"
-              class="text-body-1 font-weight-medium"
-              rounded="pill"
+              class="text-body-1 font-weight-medium animated-gradient-btn"
+              rounded="xl"
             >
               <v-icon start>mdi-calendar-check</v-icon>
               Objednat sezení
@@ -355,16 +395,42 @@
 useHead({
   title: 'Služby - Reiki & Šamanské léčení | Kateřina Patyková',
   meta: [
-    { name: 'description', content: 'Nabízím Reiki a šamanské léčení. Ceny, průběh sezení a balíčky. Certifikovaná terapeutka s více než 10 lety zkušeností.' }
+    { name: 'description', content: 'Nabízím Reiki léčení, šamanské léčení a energetické čištění. Profesionální energetické terapie pro vaši vnitřní rovnováhu a harmonii.' }
   ]
 })
+
+// GSAP animations are handled globally in app.vue
+
+// FAQ data
+const faqs = ref([
+  {
+    question: 'Jak dlouho trvá jedno sezení?',
+    answer: 'Doba sezení se liší podle typu terapie. Reiki léčení trvá 60-90 minut, šamanské léčení 90-120 minut a energetické čištění 45-60 minut.'
+  },
+  {
+    question: 'Co mám očekávat od prvního sezení?',
+    answer: 'První sezení začíná krátkou konzultací, kde si povíme o vašich potřebách a očekáváních. Poté následuje samotná terapie a na závěr shrnutí a doporučení.'
+  },
+  {
+    question: 'Je energetické léčení bezpečné?',
+    answer: 'Ano, všechny mé terapie jsou zcela bezpečné a neinvazivní. Reiki a šamanské léčení pracují s jemnými energiemi a jsou vhodné pro všechny věkové kategorie.'
+  },
+  {
+    question: 'Kolik sezení budu potřebovat?',
+    answer: 'Počet sezení je individuální a závisí na vašich potřebách a cílech. Někteří klienti pocítí úlevu již po prvním sezení, jiní potřebují více sezení pro trvalé výsledky.'
+  },
+  {
+    question: 'Mohu sezení kombinovat?',
+    answer: 'Ano, různé typy terapie se mohou vzájemně doplňovat. Ráda vám poradím, jaká kombinace bude pro vás nejvhodnější.'
+  }
+])
 </script>
 
 <style scoped>
 .hero-section {
   background: linear-gradient(135deg, 
-    var(--v-accent-base) 0%, 
-    var(--v-background-base) 100%);
+    var(--v-primary-base) 0%, 
+    var(--v-secondary-base) 100%);
   position: relative;
   overflow: hidden;
 }

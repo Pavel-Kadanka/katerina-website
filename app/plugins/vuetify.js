@@ -1,73 +1,74 @@
 import '@mdi/font/css/materialdesignicons.css'
 import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
+import { aliases, mdi } from 'vuetify/iconsets/mdi'
 
 export default defineNuxtPlugin((nuxtApp) => {
   const light = {
     dark: false,
     colors: {
-      // Primary colors
-      primary: '#D78BBF', // orchid pink
-      'primary-darken-1': '#C67AAE',
-      'primary-lighten-1': '#E9A8D6',
+      // Primary colors - Soft lavender (spiritual, calming)
+      primary: '#8B7EC8',
+      'primary-darken-1': '#7A6BB8',
+      'primary-lighten-1': '#9A8DD8',
       
-      // Secondary colors
-      secondary: '#B29DD9', // lavender
-      'secondary-darken-1': '#A18CC8',
-      'secondary-lighten-1': '#C5B5EC',
+      // Secondary colors - Warm pastel pink (feminine, soft)
+      secondary: '#E8C1D3',
+      'secondary-darken-1': '#D7B0C2',
+      'secondary-lighten-1': '#F0D2E4',
       
-      // Background colors - more pink, less blinding
-      background: '#FDF2F8', // warmer pink-white
-      surface: '#F8F0F5', // warmer lavender-tinted white
-      accent: '#F9EBF3', // soft blush (background tint)
+      // Accent colors - Brighter pink-purple for call-to-actions
+      accent: '#D49DC9',
+      'accent-darken-1': '#C38CB8',
+      'accent-lighten-1': '#E5B0DA',
       
-      // Text colors
-      'text-primary': '#2E2E2E', // dark gray
-      'text-secondary': '#666666', // medium gray
+      // Surface colors - Pale pink background for sections
+      surface: '#FAF7FC',
+      background: '#FAF7FC',
       
-      // CTA colors
-      cta: '#FF99C8', // rose-pink
-      'cta-lighten-1': '#FFADE1', // light candy pink
+      // Text colors - Improved visibility
+      'text-primary': '#2C3E50',
+      'text-secondary': '#4A5568', // Darker for better visibility
       
       // System colors
-      error: '#D32F2F',
-      info: '#1976D2',
-      success: '#388E3C',
-      warning: '#FFA000',
+      error: '#FF6B6B',
+      info: '#B39DDB',
+      success: '#A3D9A5',
+      warning: '#FFB74D',
     },
   }
   
   const dark = {
     dark: true,
     colors: {
-      // Primary colors
-      primary: '#E9A8D6', // lighter orchid
-      'primary-darken-1': '#D78BBF',
-      'primary-lighten-1': '#F2C4E3',
+      // Primary colors - Lighter lavender for dark theme
+      primary: '#9A8DD8',
+      'primary-darken-1': '#8B7EC8',
+      'primary-lighten-1': '#A99CE8',
       
-      // Secondary colors
-      secondary: '#C5B5EC', // brighter pastel lavender
-      'secondary-darken-1': '#B29DD9',
-      'secondary-lighten-1': '#D4C7F0',
+      // Secondary colors - Softer pink for dark theme
+      secondary: '#F0D2E4',
+      'secondary-darken-1': '#E8C1D3',
+      'secondary-lighten-1': '#F8E2F4',
       
-      // Background colors
-      background: '#121212', // deep black
-      surface: '#1F1B24', // deep muted purple
-      accent: '#1A1A1D', // charcoal black
+      // Accent colors - Brighter accent for dark theme
+      accent: '#E5B0DA',
+      'accent-darken-1': '#D49DC9',
+      'accent-lighten-1': '#F0C5EB',
       
-      // Text colors
+      // Background colors - Deep purple-tinted dark
+      background: '#1A1A2E',
+      surface: '#16213E',
+      
+      // Text colors - Improved visibility
       'text-primary': '#FFFFFF',
-      'text-secondary': '#CCCCCC',
-      
-      // CTA colors
-      cta: '#FFADE1', // light candy pink
-      'cta-lighten-1': '#FFC2E8',
+      'text-secondary': '#E8E8E8', // Brighter for better visibility
       
       // System colors
-      error: '#EF9A9A',
-      info: '#90CAF9',
-      success: '#A5D6A7',
-      warning: '#FFE082',
+      error: '#FF8A8A',
+      info: '#C7A8E8',
+      success: '#B8E6B8',
+      warning: '#FFD280',
     },
   }
   
@@ -81,6 +82,8 @@ export default defineNuxtPlugin((nuxtApp) => {
     },
     icons: {
       defaultSet: 'mdi',
+      aliases,
+      sets: { mdi }
     },
   })
   

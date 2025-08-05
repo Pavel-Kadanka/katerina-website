@@ -5,6 +5,21 @@ export default defineNuxtConfig({
     'vuetify/styles',
     '@mdi/font/css/materialdesignicons.css',
     '@/assets/styles/gradients.css',
+    '@/assets/styles/global.scss',
+    '@/assets/styles/animations.css',
+  ],
+
+  // Page transition configuration
+  app: {
+    pageTransition: {
+      name: 'page',
+      mode: 'out-in'
+    }
+  },
+
+  // Plugins
+  plugins: [
+    '~/plugins/router.client.ts'
   ],
 
   build: {
