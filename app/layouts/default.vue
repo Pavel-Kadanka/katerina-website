@@ -84,6 +84,11 @@
         <div class="text-caption text-secondary mt-1">
           <span>Terapeutická sezení nenahrazují lékařskou péči. Při zdravotních problémech se vždy poraďte s lékařem.</span>
         </div>
+        
+        <!-- Web Development Credit -->
+        <div class="text-caption text-secondary mt-2">
+          <span>Web vytvořil <a href="https://www.sociya.cz/" target="_blank" class="text-accent text-decoration-none">Sociya</a></span>
+        </div>
       </v-container>
     </v-footer>
   </v-app>
