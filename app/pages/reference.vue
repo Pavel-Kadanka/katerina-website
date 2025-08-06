@@ -118,9 +118,16 @@
               </v-card>
             </v-col>
           </v-row>
+        </v-col>
+      </v-row>
+    </v-container>
 
-          <!-- Call to Action -->
-          <v-row class="mt-16">
+    <!-- Call to Action -->
+    <v-container fluid class="section-container soft-gradient-primary">
+      <v-row justify="center">
+        <v-col cols="12" md="8" class="text-center scroll-animate-scale">
+      <!-- Call to Action -->
+      <v-row class="mt-16">
             <v-col cols="12" class="text-center scroll-animate-scale">
               <v-card
                 class="cta-card pa-8"

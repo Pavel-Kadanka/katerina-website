@@ -295,7 +295,7 @@
     </v-container>
 
     <!-- Call to Action -->
-    <v-container class="section-container soft-gradient-primary">
+    <v-container fluid class="section-container soft-gradient-primary">
       <v-row justify="center">
         <v-col cols="12" md="8" class="text-center scroll-animate-scale">
           <v-card
